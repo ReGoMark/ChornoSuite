@@ -1,4 +1,8 @@
 ﻿
+Imports System.ComponentModel
+Imports System.Diagnostics
+Imports System
+
 Public Class Form1
     Private countdownTime As Integer ' 存储倒计时总秒数
     Private remainingTime As Integer ' 存储剩余时间
@@ -21,6 +25,16 @@ Public Class Form1
     Dim chk2 As String
     Dim chk3 As String
 
+    Dim alh1 As String
+    Dim alm1 As String
+    Dim alh2 As String
+    Dim alm2 As String
+    Dim alh3 As String
+    Dim alm3 As String
+
+
+
+
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         '初始化程序
         sec = 0
@@ -29,14 +43,36 @@ Public Class Form1
         Timer1.Enabled = False
         TextBox1.Text = ""
         ComboBox1.SelectedIndex = 0
-        'Me.Width = 365
+        Me.Width = 365
+        alh1 = "00"
+        alh2 = "00"
+        alh3 = "00"
+        alm1 = "00"
+        alm2 = "00"
+        alm3 = "00"
 
         '遮挡
-        Panel1.Location = New Point(0, 161)
+        Panel1.Location = New Point(1, 145)
         Panel1.BackColor = Color.WhiteSmoke
 
         '输出，仅显示
         Label3.Text = Application.StartupPath
+        path3.Text = Application.StartupPath & "alarm0.wav"
+        path4.Text = Application.StartupPath & "alarm1.wav"
+        path5.Text = Application.StartupPath & "alarm2.wav"
+
+        OpenFileDialog1.InitialDirectory = Application.StartupPath
+        OpenFileDialog1.Filter = "波形声音文件(*.wav)|*.wav|压缩标准音频文件 (*.mp3)|*.mp3|通用音频文件|*.*"
+
+
+        OpenFileDialog2.InitialDirectory = Application.StartupPath
+        OpenFileDialog1.Filter = "波形声音文件(*.wav)|*.wav|压缩标准音频文件 (*.mp3)|*.mp3|通用音频文件|*.*"
+
+
+        OpenFileDialog3.InitialDirectory = Application.StartupPath
+        OpenFileDialog1.Filter = "波形声音文件(*.wav)|*.wav|压缩标准音频文件 (*.mp3)|*.mp3|通用音频文件|*.*"
+
+
 
     End Sub
 
@@ -101,7 +137,7 @@ Public Class Form1
         stop1.Text = h0.Text & ":" & m0.Text & ":" & s0.Text
         Form2.stop4.Text = stop1.Text
 
-        systime0.Text = Now.Hour & ":" & Now.Minute
+        systime0.Text = String.Format("{0:D2}:{1:D2}", Now.Hour, Now.Minute)
         systime1.Text = "系统时间:" & systime0.Text
 
         autoprt.Interval = CInt(prtitvl.Value * 100)
@@ -147,7 +183,7 @@ Public Class Form1
             text0.Enabled = False
         End If
         Form3.Label1.Text = tick0.Text
-        Form3.Text = "ChnSuit-定时：" & "" & tick0.Text & "，" & text0.Text
+        Form3.Text = "ChronoSuite | 定时"
 
         i = CStr(armc1.CheckState) + CStr(armc2.CheckState) + CStr(armc3.CheckState)
 
@@ -171,6 +207,10 @@ Public Class Form1
         armc1.Text = "√ " & armt1.Text
         armc2.Text = "√ " & armt2.Text
         armc3.Text = "√ " & armt3.Text
+
+        arml1.Text = alh1 & ":" & alm1
+        arml2.Text = alh2 & ":" & alm2
+        arml3.Text = alh3 & ":" & alm3
     End Sub
 
     Private Sub s1_TextChanged(sender As Object, e As EventArgs) Handles s1.TextChanged
@@ -267,19 +307,15 @@ Public Class Form1
             btnResume.Visible = False
             btnPause.Visible = True
             btnPause.Enabled = True
-            'btnStop.Enabled = True
             btnReset.Enabled = True
             isPaused = False
-            'tick0.Visible = False
 
             nudHours.Enabled = False
             nudMinutes.Enabled = False
             nudSeconds.Enabled = False
             ComboBox1.Enabled = False
-            'TextBox2.Enabled = False
         End If
 
-        'tick0.Visible = False
         lblTime.Visible = True
     End Sub
 
@@ -308,11 +344,8 @@ Public Class Form1
         ProgressBar1.Value = remainingTime
         lblPercent.Text = "100"
         btnStart.Visible = True
-        'btnPause.Enabled = False
-        'btnStop.Enabled = False
-        'btnReset.Enabled = False
         isPaused = False
-        'tick0.Visible = True
+        lblPro1.Width = lblPro0.Width
 
         nudHours.Enabled = True
         nudMinutes.Enabled = True
@@ -329,17 +362,12 @@ Public Class Form1
         nudHours.Value = 0
         nudMinutes.Value = 0
         nudSeconds.Value = 0
+        lblPro1.Width = lblPro0.Width
 
         UpdateTimeDisplay()
         ProgressBar1.Value = 0
         lblPercent.Text = "100"
         btnStart.Visible = True
-        'tick0.Visible = True
-        'lblTime.Visible = False
-        'btnPause.Enabled = False
-        'btnStop.Enabled = False
-        'btnReset.Enabled = False
-        'btnZero.Enabled = False
         isPaused = False
 
         nudHours.Enabled = True
@@ -365,11 +393,9 @@ Public Class Form1
 
             btnStart.Enabled = True
             btnStart.Visible = True
-            'tick0.Visible = True
             btnPause.Enabled = False
             btnStop.Enabled = False
-            'btnReset.Enabled = False
-            'btnZero.Enabled = False
+
         End If
     End Sub
 
@@ -450,9 +476,29 @@ Public Class Form1
         If armc1.Checked = True Then
             arml1.Enabled = True
             Button3.ForeColor = Color.Black
+            Timer5.Enabled = True
+
+            nh3.Enabled = False
+            nm3.Enabled = False
+
+            path3.Enabled = False
+            add3.Enabled = False
+            dft3.Enabled = False
+
         Else
             arml1.Enabled = False
             Button3.ForeColor = Color.DarkGray
+            Timer5.Enabled = False
+
+            nh3.Enabled = True
+            nm3.Enabled = True
+
+            path3.Enabled = True
+
+            add3.Enabled = True
+            dft3.Enabled = True
+
+
         End If
     End Sub
 
@@ -460,9 +506,30 @@ Public Class Form1
         If armc2.Checked = True Then
             arml2.Enabled = True
             Button4.ForeColor = Color.Black
+            Timer6.Enabled = True
+
+            nh4.Enabled = False
+            nm4.Enabled = False
+
+            path4.Enabled = False
+
+            add4.Enabled = False
+            dft4.Enabled = False
+
         Else
             arml2.Enabled = False
             Button4.ForeColor = Color.DarkGray
+            Timer6.Enabled = False
+
+            nh4.Enabled = True
+            nm4.Enabled = True
+
+            path4.Enabled = True
+
+            add4.Enabled = True
+            dft4.Enabled = True
+
+
         End If
     End Sub
 
@@ -470,39 +537,236 @@ Public Class Form1
         If armc3.Checked = True Then
             arml3.Enabled = True
             Button5.ForeColor = Color.Black
+            Timer7.Enabled = True
+
+            nh5.Enabled = False
+            nm5.Enabled = False
+
+            path5.Enabled = False
+
+            add5.Enabled = False
+            dft5.Enabled = False
+
         Else
             arml3.Enabled = False
             Button5.ForeColor = Color.DarkGray
+            Timer7.Enabled = False
+
+            nh5.Enabled = True
+            nm5.Enabled = True
+
+            path5.Enabled = True
+
+            add5.Enabled = True
+            dft5.Enabled = True
+
         End If
     End Sub
 
-    Private Sub armc1_MouseHover(sender As Object, e As EventArgs) Handles armc1.MouseHover
+    Private Sub nh3_ValueChanged(sender As Object, e As EventArgs) Handles nh3.ValueChanged
+        If nh3.Value < 10 Then
+            alh1 = "0" & nh3.Value
+        Else
+            alh1 = CStr(nh3.Value)
+        End If
+    End Sub
+
+    Private Sub nm3_ValueChanged(sender As Object, e As EventArgs) Handles nm3.ValueChanged
+        If nm3.Value < 10 Then
+            alm1 = "0" & nm3.Value
+        Else
+            alm1 = CStr(nm3.Value)
+        End If
+    End Sub
+
+    Private Sub nh4_ValueChanged(sender As Object, e As EventArgs) Handles nh4.ValueChanged
+        If nh4.Value < 10 Then
+            alh2 = "0" & nh4.Value
+        Else
+            alh2 = CStr(nh4.Value)
+        End If
+    End Sub
+
+    Private Sub nm4_ValueChanged(sender As Object, e As EventArgs) Handles nm4.ValueChanged
+        If nm4.Value < 10 Then
+            alm2 = "0" & nm4.Value
+        Else
+            alm2 = CStr(nm4.Value)
+        End If
+    End Sub
+
+    Private Sub nh5_ValueChanged(sender As Object, e As EventArgs) Handles nh5.ValueChanged
+        If nh5.Value < 10 Then
+            alh3 = "0" & nh5.Value
+        Else
+            alh3 = CStr(nh5.Value)
+        End If
+    End Sub
+
+    Private Sub nm5_ValueChanged(sender As Object, e As EventArgs) Handles nm5.ValueChanged
+        If nm5.Value < 10 Then
+            alm3 = "0" & nm5.Value
+        Else
+            alm3 = CStr(nm5.Value)
+        End If
+    End Sub
+
+    Private Sub CheckBox2_CheckStateChanged(sender As Object, e As EventArgs) Handles CheckBox2.CheckStateChanged
+        If CheckBox2.Checked = False Then
+            Me.Size = New Size(752, 581)
+        Else
+            Me.Size = New Size(365, 581)
+        End If
+    End Sub
+
+    Private Sub Timer5_Tick(sender As Object, e As EventArgs) Handles Timer5.Tick
         If armc1.Checked = True Then
-            chk1 = "[1,启用]"
-        Else
-            chk1 = "[1,禁用]"
+            If arml1.Text = systime0.Text Then
+                Form5.Show()
+            End If
+            Form5.TextBox1.Text = armt1.Text
+            Form5.Label1.Text = arml1.Text
         End If
-        ToolTip2.ToolTipTitle = chk1
-        ToolTip2.SetToolTip(Me.armc1, armt1.Text)
+
     End Sub
 
-    Private Sub armc2_MouseHover(sender As Object, e As EventArgs) Handles armc2.MouseHover
+
+    Private Sub btn0_Click(sender As Object, e As EventArgs) Handles btn0.Click
+        If Now.Minute + 1 > 60 Then
+            nm3.Value = Now.Minute + 1
+
+        End If
+        If Now.Minute = 59 Then
+            nh3.Value = Now.Hour + 1
+            nm3.Value = 0
+        End If
+        If Now.Minute >= 0 Then
+            nh3.Value = Now.Hour
+            nm3.Value = Now.Minute + 1
+        End If
+    End Sub
+
+    Private Sub pre2_Click(sender As Object, e As EventArgs) Handles pre2.Click
+        If Now.Minute + 1 > 60 Then
+            nm4.Value = Now.Minute + 1
+
+        End If
+        If Now.Minute = 59 Then
+            nh4.Value = Now.Hour + 1
+            nm4.Value = 0
+        End If
+        If Now.Minute >= 0 Then
+            nh4.Value = Now.Hour
+            nm4.Value = Now.Minute + 1
+        End If
+    End Sub
+
+    Private Sub pre3_Click(sender As Object, e As EventArgs) Handles pre3.Click
+        If Now.Minute + 1 > 60 Then
+            nm5.Value = Now.Minute + 1
+
+        End If
+        If Now.Minute = 59 Then
+            nh5.Value = Now.Hour + 1
+            nm5.Value = 0
+        End If
+        If Now.Minute >= 0 Then
+            nh5.Value = Now.Hour
+            nm5.Value = Now.Minute + 1
+        End If
+    End Sub
+
+    Private Sub cls3_Click(sender As Object, e As EventArgs) Handles cls3.Click
+        nh3.Value = 0
+        nm3.Value = 0
+        armc1.Checked = False
+    End Sub
+
+    Private Sub cls4_Click(sender As Object, e As EventArgs) Handles cls4.Click
+        nh4.Value = 0
+        nm4.Value = 0
+        armc2.Checked = False
+    End Sub
+
+    Private Sub cls5_Click(sender As Object, e As EventArgs) Handles cls5.Click
+        nh5.Value = 0
+        nm5.Value = 0
+        armc3.Checked = False
+    End Sub
+
+    Private Sub Button3_MouseHover(sender As Object, e As EventArgs) Handles Button3.MouseHover
+        TabControl2.SelectedIndex = 0
+    End Sub
+
+    Private Sub Button4_MouseHover(sender As Object, e As EventArgs) Handles Button4.MouseHover
+        TabControl2.SelectedIndex = 1
+    End Sub
+
+    Private Sub Button5_MouseHover(sender As Object, e As EventArgs) Handles Button5.MouseHover
+        TabControl2.SelectedIndex = 2
+    End Sub
+
+    Private Sub cln3_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles cln3.LinkClicked
+        armt1.Text = ""
+    End Sub
+
+    Private Sub cln4_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles cln4.LinkClicked
+        armt2.Text = ""
+    End Sub
+
+    Private Sub cln5_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles cln5.LinkClicked
+        armt3.Text = ""
+    End Sub
+
+    Private Sub Timer6_Tick(sender As Object, e As EventArgs) Handles Timer6.Tick
         If armc2.Checked = True Then
-            chk2 = "[2,启用]"
-        Else
-            chk2 = "[2,禁用]"
+            If arml2.Text = systime0.Text Then
+                Form6.Show()
+            End If
+            Form6.TextBox1.Text = armt2.Text
+            Form6.Label1.Text = arml2.Text
         End If
-        ToolTip3.ToolTipTitle = chk2
-        ToolTip3.SetToolTip(Me.armc2, armt2.Text)
     End Sub
 
-    Private Sub armc3_MouseHover(sender As Object, e As EventArgs) Handles armc3.MouseHover
+    Private Sub Timer7_Tick(sender As Object, e As EventArgs) Handles Timer7.Tick
         If armc3.Checked = True Then
-            chk3 = "[3,启用]"
-        Else
-            chk3 = "[3,禁用]"
+            If arml3.Text = systime0.Text Then
+                Form7.Show()
+            End If
+            Form7.TextBox1.Text = armt3.Text
+            Form7.Label1.Text = arml3.Text
         End If
-        ToolTip4.ToolTipTitle = chk3
-        ToolTip4.SetToolTip(Me.armc3, armt3.Text)
+    End Sub
+
+    Private Sub add3_Click(sender As Object, e As EventArgs) Handles add3.Click
+        OpenFileDialog1.ShowDialog()
+    End Sub
+
+    Private Sub dft3_Click(sender As Object, e As EventArgs) Handles dft3.Click
+        path3.Text = Application.StartupPath & "alarm0.wav"
+    End Sub
+
+    Private Sub dft4_Click(sender As Object, e As EventArgs) Handles dft4.Click
+        path4.Text = Application.StartupPath & "alarm1.wav"
+    End Sub
+
+    Private Sub dft5_Click(sender As Object, e As EventArgs) Handles dft5.Click
+        path5.Text = Application.StartupPath & "alarm2.wav"
+    End Sub
+
+    Private Sub OpenFileDialog1_FileOk(sender As Object, e As CancelEventArgs) Handles OpenFileDialog1.FileOk
+        path3.Text = OpenFileDialog1.FileName
+    End Sub
+
+    Private Sub OpenFileDialog2_FileOk(sender As Object, e As CancelEventArgs) Handles OpenFileDialog2.FileOk
+        path4.Text = OpenFileDialog2.FileName
+    End Sub
+
+    Private Sub OpenFileDialog3_FileOk(sender As Object, e As CancelEventArgs) Handles OpenFileDialog3.FileOk
+        path5.Text = OpenFileDialog3.FileName
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
     End Sub
 End Class

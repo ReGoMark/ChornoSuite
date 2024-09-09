@@ -33,7 +33,7 @@ Partial Class Form3
         ' 
         Label1.AutoSize = True
         Label1.Font = New Font("Microsoft YaHei UI", 16F, FontStyle.Regular, GraphicsUnit.Point)
-        Label1.Location = New Point(12, 12)
+        Label1.Location = New Point(12, 13)
         Label1.Name = "Label1"
         Label1.Size = New Size(117, 35)
         Label1.TabIndex = 0
@@ -42,7 +42,7 @@ Partial Class Form3
         ' Button1
         ' 
         Button1.Image = CType(resources.GetObject("Button1.Image"), Image)
-        Button1.Location = New Point(352, 12)
+        Button1.Location = New Point(350, 13)
         Button1.Name = "Button1"
         Button1.Size = New Size(35, 35)
         Button1.TabIndex = 2
@@ -51,7 +51,7 @@ Partial Class Form3
         ' Button2
         ' 
         Button2.Image = CType(resources.GetObject("Button2.Image"), Image)
-        Button2.Location = New Point(311, 12)
+        Button2.Location = New Point(309, 13)
         Button2.Name = "Button2"
         Button2.Size = New Size(35, 35)
         Button2.TabIndex = 3
@@ -59,14 +59,13 @@ Partial Class Form3
         ' 
         ' TextBox1
         ' 
-        TextBox1.BackColor = SystemColors.Control
-        TextBox1.BorderStyle = BorderStyle.None
+        TextBox1.BackColor = SystemColors.ButtonHighlight
+        TextBox1.BorderStyle = BorderStyle.FixedSingle
         TextBox1.Font = New Font("Microsoft YaHei UI", 11F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox1.Location = New Point(14, 59)
+        TextBox1.Location = New Point(15, 63)
         TextBox1.Multiline = True
         TextBox1.Name = "TextBox1"
-        TextBox1.ScrollBars = ScrollBars.Vertical
-        TextBox1.Size = New Size(370, 95)
+        TextBox1.Size = New Size(369, 93)
         TextBox1.TabIndex = 4
         ' 
         ' Form3
@@ -84,7 +83,7 @@ Partial Class Form3
         MaximizeBox = False
         MinimizeBox = False
         Name = "Form3"
-        Text = "ChnSuit-定时："
+        Text = "ChronSuite | 定时"
         TopMost = True
         ResumeLayout(False)
         PerformLayout()

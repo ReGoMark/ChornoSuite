@@ -61,55 +61,62 @@ Partial Class Form1
         armc1 = New CheckBox()
         systime1 = New Label()
         arml3 = New Label()
+        sound5 = New CheckBox()
+        sound4 = New CheckBox()
         arml2 = New Label()
         arml1 = New Label()
         Button5 = New Button()
+        sound3 = New CheckBox()
         Button4 = New Button()
         Button3 = New Button()
         LinkLabel3 = New LinkLabel()
         Panel1 = New Panel()
         TabControl2 = New TabControl()
         TabPage5 = New TabPage()
-        LinkLabel6 = New LinkLabel()
+        dft3 = New Button()
+        btn0 = New Button()
+        nh3 = New NumericUpDown()
+        nm3 = New NumericUpDown()
+        cls3 = New Button()
+        cln3 = New LinkLabel()
         CheckBox10 = New CheckBox()
         armt1 = New TextBox()
-        NumericUpDown1 = New NumericUpDown()
         Label13 = New Label()
-        CheckBox1 = New CheckBox()
-        Button1 = New Button()
-        TextBox4 = New TextBox()
-        Button6 = New Button()
-        NumericUpDown2 = New NumericUpDown()
-        Button2 = New Button()
+        add3 = New Button()
+        path3 = New TextBox()
         TabPage6 = New TabPage()
-        LinkLabel5 = New LinkLabel()
+        dft4 = New Button()
+        pre2 = New Button()
+        cln4 = New LinkLabel()
         CheckBox11 = New CheckBox()
         armt2 = New TextBox()
         Label12 = New Label()
-        CheckBox5 = New CheckBox()
-        NumericUpDown5 = New NumericUpDown()
-        Button10 = New Button()
-        Button7 = New Button()
-        NumericUpDown4 = New NumericUpDown()
-        TextBox6 = New TextBox()
-        Button8 = New Button()
+        nh4 = New NumericUpDown()
+        cls4 = New Button()
+        add4 = New Button()
+        nm4 = New NumericUpDown()
+        path4 = New TextBox()
         TabPage7 = New TabPage()
-        LinkLabel4 = New LinkLabel()
+        dft5 = New Button()
+        pre3 = New Button()
+        cln5 = New LinkLabel()
         CheckBox12 = New CheckBox()
         armt3 = New TextBox()
         Label14 = New Label()
-        CheckBox6 = New CheckBox()
-        Button12 = New Button()
-        TextBox8 = New TextBox()
-        Button13 = New Button()
-        NumericUpDown6 = New NumericUpDown()
-        NumericUpDown7 = New NumericUpDown()
-        Button14 = New Button()
+        add5 = New Button()
+        path5 = New TextBox()
+        nm5 = New NumericUpDown()
+        nh5 = New NumericUpDown()
+        cls5 = New Button()
         TabPage4 = New TabPage()
+        Label4 = New Label()
+        LinkLabel4 = New LinkLabel()
+        Label1 = New Label()
+        Button1 = New Button()
+        PictureBox1 = New PictureBox()
         Label6 = New Label()
         Label5 = New Label()
         Button11 = New Button()
-        Button9 = New Button()
         btnStop = New Button()
         ProgressBar1 = New ProgressBar()
         s1 = New LinkLabel()
@@ -135,13 +142,16 @@ Partial Class Form1
         lblPro1 = New Label()
         Panel3 = New Panel()
         Panel4 = New Panel()
+        CheckBox2 = New CheckBox()
         autoprt = New Timer(components)
         Label3 = New Label()
         TextBox2 = New TextBox()
-        ToolTip2 = New ToolTip(components)
-        ToolTip3 = New ToolTip(components)
-        ToolTip4 = New ToolTip(components)
-        Timer3 = New Timer(components)
+        Timer5 = New Timer(components)
+        Timer6 = New Timer(components)
+        Timer7 = New Timer(components)
+        OpenFileDialog1 = New OpenFileDialog()
+        OpenFileDialog2 = New OpenFileDialog()
+        OpenFileDialog3 = New OpenFileDialog()
         TabControl1.SuspendLayout()
         TabPage1.SuspendLayout()
         CType(prtitvl, ComponentModel.ISupportInitialize).BeginInit()
@@ -152,15 +162,16 @@ Partial Class Form1
         TabPage3.SuspendLayout()
         TabControl2.SuspendLayout()
         TabPage5.SuspendLayout()
-        CType(NumericUpDown1, ComponentModel.ISupportInitialize).BeginInit()
-        CType(NumericUpDown2, ComponentModel.ISupportInitialize).BeginInit()
+        CType(nh3, ComponentModel.ISupportInitialize).BeginInit()
+        CType(nm3, ComponentModel.ISupportInitialize).BeginInit()
         TabPage6.SuspendLayout()
-        CType(NumericUpDown5, ComponentModel.ISupportInitialize).BeginInit()
-        CType(NumericUpDown4, ComponentModel.ISupportInitialize).BeginInit()
+        CType(nh4, ComponentModel.ISupportInitialize).BeginInit()
+        CType(nm4, ComponentModel.ISupportInitialize).BeginInit()
         TabPage7.SuspendLayout()
-        CType(NumericUpDown6, ComponentModel.ISupportInitialize).BeginInit()
-        CType(NumericUpDown7, ComponentModel.ISupportInitialize).BeginInit()
+        CType(nm5, ComponentModel.ISupportInitialize).BeginInit()
+        CType(nh5, ComponentModel.ISupportInitialize).BeginInit()
         TabPage4.SuspendLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel3.SuspendLayout()
         Panel4.SuspendLayout()
         SuspendLayout()
@@ -173,7 +184,7 @@ Partial Class Form1
         TabControl1.Controls.Add(TabPage3)
         TabControl1.Controls.Add(TabPage4)
         TabControl1.Font = New Font("微软雅黑", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        TabControl1.ItemSize = New Size(61, 32)
+        TabControl1.ItemSize = New Size(58, 32)
         TabControl1.Location = New Point(-1, -3)
         TabControl1.Multiline = True
         TabControl1.Name = "TabControl1"
@@ -255,6 +266,7 @@ Partial Class Form1
         st1.Name = "st1"
         st1.Size = New Size(80, 48)
         st1.TabIndex = 1
+        ToolTip1.SetToolTip(st1, "开始")
         st1.UseVisualStyleBackColor = False
         ' 
         ' pa1
@@ -264,6 +276,7 @@ Partial Class Form1
         pa1.Name = "pa1"
         pa1.Size = New Size(80, 48)
         pa1.TabIndex = 7
+        ToolTip1.SetToolTip(pa1, "暂停")
         pa1.UseVisualStyleBackColor = True
         ' 
         ' ct1
@@ -273,6 +286,7 @@ Partial Class Form1
         ct1.Name = "ct1"
         ct1.Size = New Size(80, 48)
         ct1.TabIndex = 9
+        ToolTip1.SetToolTip(ct1, "继续")
         ct1.UseVisualStyleBackColor = True
         ct1.Visible = False
         ' 
@@ -332,6 +346,7 @@ Partial Class Form1
         cls1.Name = "cls1"
         cls1.Size = New Size(80, 48)
         cls1.TabIndex = 2
+        ToolTip1.SetToolTip(cls1, "归零")
         cls1.UseVisualStyleBackColor = True
         ' 
         ' stop1
@@ -386,7 +401,7 @@ Partial Class Form1
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        Label2.Location = New Point(184, 118)
+        Label2.Location = New Point(182, 118)
         Label2.Name = "Label2"
         Label2.Size = New Size(20, 27)
         Label2.TabIndex = 26
@@ -433,6 +448,7 @@ Partial Class Form1
         btnStart.Name = "btnStart"
         btnStart.Size = New Size(80, 48)
         btnStart.TabIndex = 10
+        ToolTip1.SetToolTip(btnStart, "开始")
         btnStart.UseVisualStyleBackColor = True
         ' 
         ' btnResume
@@ -442,6 +458,7 @@ Partial Class Form1
         btnResume.Name = "btnResume"
         btnResume.Size = New Size(80, 48)
         btnResume.TabIndex = 21
+        ToolTip1.SetToolTip(btnResume, "继续")
         btnResume.UseVisualStyleBackColor = True
         btnResume.Visible = False
         ' 
@@ -452,6 +469,7 @@ Partial Class Form1
         btnReset.Name = "btnReset"
         btnReset.Size = New Size(80, 48)
         btnReset.TabIndex = 20
+        ToolTip1.SetToolTip(btnReset, "归零")
         btnReset.UseVisualStyleBackColor = True
         ' 
         ' ComboBox1
@@ -465,6 +483,7 @@ Partial Class Form1
         ComboBox1.Name = "ComboBox1"
         ComboBox1.Size = New Size(103, 33)
         ComboBox1.TabIndex = 17
+        ToolTip1.SetToolTip(ComboBox1, "快捷设定")
         ' 
         ' nudSeconds
         ' 
@@ -472,7 +491,7 @@ Partial Class Form1
         nudSeconds.BorderStyle = BorderStyle.None
         nudSeconds.Font = New Font("Consolas", 25F, FontStyle.Regular, GraphicsUnit.Pixel)
         nudSeconds.ForeColor = Color.Black
-        nudSeconds.Location = New Point(176, 259)
+        nudSeconds.Location = New Point(178, 259)
         nudSeconds.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
         nudSeconds.Name = "nudSeconds"
         nudSeconds.Size = New Size(56, 33)
@@ -485,7 +504,7 @@ Partial Class Form1
         nudMinutes.BorderStyle = BorderStyle.None
         nudMinutes.Font = New Font("Consolas", 25F, FontStyle.Regular, GraphicsUnit.Pixel)
         nudMinutes.ForeColor = Color.Black
-        nudMinutes.Location = New Point(99, 259)
+        nudMinutes.Location = New Point(103, 259)
         nudMinutes.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
         nudMinutes.Name = "nudMinutes"
         nudMinutes.Size = New Size(56, 33)
@@ -498,7 +517,7 @@ Partial Class Form1
         nudHours.BorderStyle = BorderStyle.None
         nudHours.Font = New Font("Consolas", 25F, FontStyle.Regular, GraphicsUnit.Pixel)
         nudHours.ForeColor = Color.Black
-        nudHours.Location = New Point(22, 259)
+        nudHours.Location = New Point(28, 259)
         nudHours.Maximum = New Decimal(New Integer() {99, 0, 0, 0})
         nudHours.Name = "nudHours"
         nudHours.Size = New Size(56, 33)
@@ -512,6 +531,7 @@ Partial Class Form1
         btnPause.Name = "btnPause"
         btnPause.Size = New Size(80, 48)
         btnPause.TabIndex = 12
+        ToolTip1.SetToolTip(btnPause, "暂停")
         btnPause.UseVisualStyleBackColor = True
         ' 
         ' btnZero
@@ -557,9 +577,12 @@ Partial Class Form1
         TabPage3.Controls.Add(armc1)
         TabPage3.Controls.Add(systime1)
         TabPage3.Controls.Add(arml3)
+        TabPage3.Controls.Add(sound5)
+        TabPage3.Controls.Add(sound4)
         TabPage3.Controls.Add(arml2)
         TabPage3.Controls.Add(arml1)
         TabPage3.Controls.Add(Button5)
+        TabPage3.Controls.Add(sound3)
         TabPage3.Controls.Add(Button4)
         TabPage3.Controls.Add(Button3)
         TabPage3.Controls.Add(LinkLabel3)
@@ -583,10 +606,10 @@ Partial Class Form1
         armc3.ForeColor = Color.Black
         armc3.Location = New Point(147, 127)
         armc3.Name = "armc3"
-        armc3.Size = New Size(173, 36)
+        armc3.Size = New Size(132, 36)
         armc3.TabIndex = 23
         armc3.Text = "√"
-        armc3.TextAlign = ContentAlignment.MiddleCenter
+        armc3.TextAlign = ContentAlignment.TopLeft
         armc3.TextImageRelation = TextImageRelation.ImageBeforeText
         armc3.UseVisualStyleBackColor = False
         ' 
@@ -601,10 +624,10 @@ Partial Class Form1
         armc2.ForeColor = Color.Black
         armc2.Location = New Point(147, 81)
         armc2.Name = "armc2"
-        armc2.Size = New Size(173, 36)
+        armc2.Size = New Size(132, 36)
         armc2.TabIndex = 22
         armc2.Text = "√"
-        armc2.TextAlign = ContentAlignment.MiddleCenter
+        armc2.TextAlign = ContentAlignment.TopLeft
         armc2.TextImageRelation = TextImageRelation.ImageBeforeText
         armc2.UseVisualStyleBackColor = False
         ' 
@@ -619,10 +642,10 @@ Partial Class Form1
         armc1.ForeColor = Color.Black
         armc1.Location = New Point(147, 35)
         armc1.Name = "armc1"
-        armc1.Size = New Size(173, 36)
+        armc1.Size = New Size(132, 36)
         armc1.TabIndex = 21
         armc1.Text = "√"
-        armc1.TextAlign = ContentAlignment.MiddleCenter
+        armc1.TextAlign = ContentAlignment.TopLeft
         armc1.TextImageRelation = TextImageRelation.ImageBeforeText
         armc1.UseVisualStyleBackColor = False
         ' 
@@ -632,7 +655,7 @@ Partial Class Form1
         systime1.Font = New Font("微软雅黑", 9F, FontStyle.Regular, GraphicsUnit.Point)
         systime1.Location = New Point(26, 174)
         systime1.Name = "systime1"
-        systime1.Size = New Size(126, 20)
+        systime1.Size = New Size(236, 20)
         systime1.TabIndex = 3
         systime1.Text = "系统时间:00:00"
         systime1.TextAlign = ContentAlignment.MiddleLeft
@@ -647,6 +670,36 @@ Partial Class Form1
         arml3.Size = New Size(87, 35)
         arml3.TabIndex = 33
         arml3.Text = "00:00"
+        ' 
+        ' sound5
+        ' 
+        sound5.Appearance = Appearance.Button
+        sound5.Checked = True
+        sound5.CheckState = CheckState.Checked
+        sound5.FlatAppearance.BorderSize = 0
+        sound5.Image = CType(resources.GetObject("sound5.Image"), Image)
+        sound5.Location = New Point(285, 128)
+        sound5.Name = "sound5"
+        sound5.Size = New Size(35, 35)
+        sound5.TabIndex = 50
+        sound5.TextImageRelation = TextImageRelation.ImageBeforeText
+        ToolTip1.SetToolTip(sound5, "响铃")
+        sound5.UseVisualStyleBackColor = True
+        ' 
+        ' sound4
+        ' 
+        sound4.Appearance = Appearance.Button
+        sound4.Checked = True
+        sound4.CheckState = CheckState.Checked
+        sound4.FlatAppearance.BorderSize = 0
+        sound4.Image = CType(resources.GetObject("sound4.Image"), Image)
+        sound4.Location = New Point(285, 82)
+        sound4.Name = "sound4"
+        sound4.Size = New Size(35, 35)
+        sound4.TabIndex = 50
+        sound4.TextImageRelation = TextImageRelation.ImageBeforeText
+        ToolTip1.SetToolTip(sound4, "响铃")
+        sound4.UseVisualStyleBackColor = True
         ' 
         ' arml2
         ' 
@@ -684,6 +737,21 @@ Partial Class Form1
         Button5.TabIndex = 36
         Button5.Text = "3 |"
         Button5.UseVisualStyleBackColor = False
+        ' 
+        ' sound3
+        ' 
+        sound3.Appearance = Appearance.Button
+        sound3.Checked = True
+        sound3.CheckState = CheckState.Checked
+        sound3.FlatAppearance.BorderSize = 0
+        sound3.Image = CType(resources.GetObject("sound3.Image"), Image)
+        sound3.Location = New Point(285, 36)
+        sound3.Name = "sound3"
+        sound3.Size = New Size(35, 35)
+        sound3.TabIndex = 41
+        sound3.TextImageRelation = TextImageRelation.ImageBeforeText
+        ToolTip1.SetToolTip(sound3, "响铃")
+        sound3.UseVisualStyleBackColor = True
         ' 
         ' Button4
         ' 
@@ -728,9 +796,9 @@ Partial Class Form1
         ' Panel1
         ' 
         Panel1.BackColor = SystemColors.WindowFrame
-        Panel1.Location = New Point(326, 161)
+        Panel1.Location = New Point(326, 156)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(410, 45)
+        Panel1.Size = New Size(424, 49)
         Panel1.TabIndex = 38
         ' 
         ' TabControl2
@@ -748,17 +816,17 @@ Partial Class Form1
         ' TabPage5
         ' 
         TabPage5.BackColor = Color.WhiteSmoke
-        TabPage5.Controls.Add(LinkLabel6)
+        TabPage5.Controls.Add(dft3)
+        TabPage5.Controls.Add(btn0)
+        TabPage5.Controls.Add(nh3)
+        TabPage5.Controls.Add(nm3)
+        TabPage5.Controls.Add(cls3)
+        TabPage5.Controls.Add(cln3)
         TabPage5.Controls.Add(CheckBox10)
         TabPage5.Controls.Add(armt1)
-        TabPage5.Controls.Add(NumericUpDown1)
         TabPage5.Controls.Add(Label13)
-        TabPage5.Controls.Add(CheckBox1)
-        TabPage5.Controls.Add(Button1)
-        TabPage5.Controls.Add(TextBox4)
-        TabPage5.Controls.Add(Button6)
-        TabPage5.Controls.Add(NumericUpDown2)
-        TabPage5.Controls.Add(Button2)
+        TabPage5.Controls.Add(add3)
+        TabPage5.Controls.Add(path3)
         TabPage5.Location = New Point(4, 29)
         TabPage5.Name = "TabPage5"
         TabPage5.Padding = New Padding(3)
@@ -766,19 +834,75 @@ Partial Class Form1
         TabPage5.TabIndex = 0
         TabPage5.Text = "1"
         ' 
-        ' LinkLabel6
+        ' dft3
         ' 
-        LinkLabel6.ActiveLinkColor = Color.DimGray
-        LinkLabel6.AutoSize = True
-        LinkLabel6.LinkArea = New LinkArea(0, 2)
-        LinkLabel6.LinkBehavior = LinkBehavior.NeverUnderline
-        LinkLabel6.LinkColor = Color.Gray
-        LinkLabel6.Location = New Point(283, 106)
-        LinkLabel6.Name = "LinkLabel6"
-        LinkLabel6.Size = New Size(39, 20)
-        LinkLabel6.TabIndex = 54
-        LinkLabel6.TabStop = True
-        LinkLabel6.Text = "清空"
+        dft3.Location = New Point(246, 66)
+        dft3.Name = "dft3"
+        dft3.Size = New Size(76, 35)
+        dft3.TabIndex = 57
+        dft3.Text = "默认"
+        dft3.UseVisualStyleBackColor = True
+        ' 
+        ' btn0
+        ' 
+        btn0.Location = New Point(246, 24)
+        btn0.Name = "btn0"
+        btn0.Size = New Size(76, 35)
+        btn0.TabIndex = 55
+        btn0.Text = "预响铃"
+        btn0.UseVisualStyleBackColor = True
+        ' 
+        ' nh3
+        ' 
+        nh3.BackColor = Color.WhiteSmoke
+        nh3.BorderStyle = BorderStyle.None
+        nh3.Font = New Font("Consolas", 25F, FontStyle.Regular, GraphicsUnit.Pixel)
+        nh3.ForeColor = Color.Black
+        nh3.Location = New Point(26, 26)
+        nh3.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
+        nh3.Name = "nh3"
+        nh3.Size = New Size(55, 33)
+        nh3.TabIndex = 32
+        nh3.TextAlign = HorizontalAlignment.Center
+        ' 
+        ' nm3
+        ' 
+        nm3.BackColor = Color.WhiteSmoke
+        nm3.BorderStyle = BorderStyle.None
+        nm3.Font = New Font("Consolas", 25F, FontStyle.Regular, GraphicsUnit.Pixel)
+        nm3.ForeColor = Color.Black
+        nm3.Location = New Point(93, 26)
+        nm3.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
+        nm3.Name = "nm3"
+        nm3.Size = New Size(55, 33)
+        nm3.TabIndex = 33
+        nm3.TextAlign = HorizontalAlignment.Center
+        ' 
+        ' cls3
+        ' 
+        cls3.Image = CType(resources.GetObject("cls3.Image"), Image)
+        cls3.Location = New Point(161, 24)
+        cls3.Name = "cls3"
+        cls3.Size = New Size(79, 35)
+        cls3.TabIndex = 31
+        cls3.Text = "归零"
+        cls3.TextAlign = ContentAlignment.MiddleRight
+        cls3.TextImageRelation = TextImageRelation.ImageBeforeText
+        cls3.UseVisualStyleBackColor = True
+        ' 
+        ' cln3
+        ' 
+        cln3.ActiveLinkColor = Color.DimGray
+        cln3.AutoSize = True
+        cln3.LinkArea = New LinkArea(0, 2)
+        cln3.LinkBehavior = LinkBehavior.NeverUnderline
+        cln3.LinkColor = Color.Gray
+        cln3.Location = New Point(283, 107)
+        cln3.Name = "cln3"
+        cln3.Size = New Size(39, 20)
+        cln3.TabIndex = 54
+        cln3.TabStop = True
+        cln3.Text = "清空"
         ' 
         ' CheckBox10
         ' 
@@ -787,35 +911,23 @@ Partial Class Form1
         CheckBox10.ForeColor = Color.DimGray
         CheckBox10.Image = CType(resources.GetObject("CheckBox10.Image"), Image)
         CheckBox10.ImageAlign = ContentAlignment.MiddleLeft
-        CheckBox10.Location = New Point(27, 105)
+        CheckBox10.Location = New Point(205, 105)
         CheckBox10.Name = "CheckBox10"
-        CheckBox10.Size = New Size(141, 24)
+        CheckBox10.Size = New Size(76, 24)
         CheckBox10.TabIndex = 43
-        CheckBox10.Text = "1上的标记："
+        CheckBox10.Text = "1"
         CheckBox10.TextAlign = ContentAlignment.MiddleCenter
         CheckBox10.UseVisualStyleBackColor = True
         ' 
         ' armt1
         ' 
-        armt1.Location = New Point(26, 134)
+        armt1.Location = New Point(26, 135)
         armt1.MaxLength = 20
         armt1.Multiline = True
         armt1.Name = "armt1"
         armt1.ScrollBars = ScrollBars.Vertical
-        armt1.Size = New Size(295, 100)
+        armt1.Size = New Size(295, 99)
         armt1.TabIndex = 35
-        ' 
-        ' NumericUpDown1
-        ' 
-        NumericUpDown1.BackColor = Color.WhiteSmoke
-        NumericUpDown1.BorderStyle = BorderStyle.None
-        NumericUpDown1.Font = New Font("Consolas", 15F, FontStyle.Regular, GraphicsUnit.Point)
-        NumericUpDown1.ForeColor = Color.Black
-        NumericUpDown1.Location = New Point(26, 26)
-        NumericUpDown1.Name = "NumericUpDown1"
-        NumericUpDown1.Size = New Size(55, 33)
-        NumericUpDown1.TabIndex = 32
-        NumericUpDown1.TextAlign = HorizontalAlignment.Center
         ' 
         ' Label13
         ' 
@@ -827,80 +939,42 @@ Partial Class Form1
         Label13.TabIndex = 42
         Label13.Text = "#1"
         ' 
-        ' CheckBox1
+        ' add3
         ' 
-        CheckBox1.Appearance = Appearance.Button
-        CheckBox1.Checked = True
-        CheckBox1.CheckState = CheckState.Checked
-        CheckBox1.Image = CType(resources.GetObject("CheckBox1.Image"), Image)
-        CheckBox1.Location = New Point(287, 66)
-        CheckBox1.Name = "CheckBox1"
-        CheckBox1.Size = New Size(35, 35)
-        CheckBox1.TabIndex = 41
-        CheckBox1.TextImageRelation = TextImageRelation.ImageBeforeText
-        CheckBox1.UseVisualStyleBackColor = True
+        add3.Location = New Point(205, 66)
+        add3.Name = "add3"
+        add3.Size = New Size(35, 35)
+        add3.TabIndex = 39
+        add3.Text = "..."
+        ToolTip1.SetToolTip(add3, "选择项...")
+        add3.UseVisualStyleBackColor = True
         ' 
-        ' Button1
+        ' path3
         ' 
-        Button1.Location = New Point(246, 66)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(35, 35)
-        Button1.TabIndex = 39
-        Button1.Text = "..."
-        Button1.UseVisualStyleBackColor = True
-        ' 
-        ' TextBox4
-        ' 
-        TextBox4.Font = New Font("微软雅黑", 11F, FontStyle.Italic, GraphicsUnit.Point)
-        TextBox4.Location = New Point(26, 67)
-        TextBox4.Name = "TextBox4"
-        TextBox4.Size = New Size(214, 32)
-        TextBox4.TabIndex = 38
-        ' 
-        ' Button6
-        ' 
-        Button6.Location = New Point(190, 24)
-        Button6.Name = "Button6"
-        Button6.Size = New Size(132, 35)
-        Button6.TabIndex = 34
-        Button6.Text = "同步到系统时间"
-        Button6.UseVisualStyleBackColor = True
-        ' 
-        ' NumericUpDown2
-        ' 
-        NumericUpDown2.BackColor = Color.WhiteSmoke
-        NumericUpDown2.BorderStyle = BorderStyle.None
-        NumericUpDown2.Font = New Font("Consolas", 25F, FontStyle.Regular, GraphicsUnit.Pixel)
-        NumericUpDown2.ForeColor = Color.Black
-        NumericUpDown2.Location = New Point(88, 26)
-        NumericUpDown2.Name = "NumericUpDown2"
-        NumericUpDown2.Size = New Size(55, 33)
-        NumericUpDown2.TabIndex = 33
-        NumericUpDown2.TextAlign = HorizontalAlignment.Center
-        ' 
-        ' Button2
-        ' 
-        Button2.Image = CType(resources.GetObject("Button2.Image"), Image)
-        Button2.Location = New Point(149, 24)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(35, 35)
-        Button2.TabIndex = 31
-        Button2.UseVisualStyleBackColor = True
+        path3.BackColor = Color.White
+        path3.Font = New Font("微软雅黑", 9F, FontStyle.Italic, GraphicsUnit.Point)
+        path3.Location = New Point(26, 67)
+        path3.Multiline = True
+        path3.Name = "path3"
+        path3.ReadOnly = True
+        path3.ScrollBars = ScrollBars.Vertical
+        path3.Size = New Size(173, 59)
+        path3.TabIndex = 38
         ' 
         ' TabPage6
         ' 
         TabPage6.BackColor = Color.WhiteSmoke
-        TabPage6.Controls.Add(LinkLabel5)
+        TabPage6.Controls.Add(dft4)
+        TabPage6.Controls.Add(pre2)
+        TabPage6.Controls.Add(cln4)
         TabPage6.Controls.Add(CheckBox11)
         TabPage6.Controls.Add(armt2)
         TabPage6.Controls.Add(Label12)
-        TabPage6.Controls.Add(CheckBox5)
-        TabPage6.Controls.Add(NumericUpDown5)
-        TabPage6.Controls.Add(Button10)
-        TabPage6.Controls.Add(Button7)
-        TabPage6.Controls.Add(NumericUpDown4)
-        TabPage6.Controls.Add(TextBox6)
-        TabPage6.Controls.Add(Button8)
+        TabPage6.Controls.Add(nh4)
+        TabPage6.Controls.Add(cls4)
+        TabPage6.Controls.Add(add4)
+        TabPage6.Controls.Add(nm4)
+        TabPage6.Controls.Add(path4)
         TabPage6.Location = New Point(4, 29)
         TabPage6.Name = "TabPage6"
         TabPage6.Padding = New Padding(3)
@@ -908,18 +982,36 @@ Partial Class Form1
         TabPage6.TabIndex = 1
         TabPage6.Text = "2"
         ' 
-        ' LinkLabel5
+        ' dft4
         ' 
-        LinkLabel5.ActiveLinkColor = Color.DimGray
-        LinkLabel5.AutoSize = True
-        LinkLabel5.LinkBehavior = LinkBehavior.NeverUnderline
-        LinkLabel5.LinkColor = Color.Gray
-        LinkLabel5.Location = New Point(283, 106)
-        LinkLabel5.Name = "LinkLabel5"
-        LinkLabel5.Size = New Size(39, 20)
-        LinkLabel5.TabIndex = 54
-        LinkLabel5.TabStop = True
-        LinkLabel5.Text = "清空"
+        dft4.Location = New Point(246, 66)
+        dft4.Name = "dft4"
+        dft4.Size = New Size(76, 35)
+        dft4.TabIndex = 56
+        dft4.Text = "默认"
+        dft4.UseVisualStyleBackColor = True
+        ' 
+        ' pre2
+        ' 
+        pre2.Location = New Point(246, 24)
+        pre2.Name = "pre2"
+        pre2.Size = New Size(76, 35)
+        pre2.TabIndex = 55
+        pre2.Text = "预响铃"
+        pre2.UseVisualStyleBackColor = True
+        ' 
+        ' cln4
+        ' 
+        cln4.ActiveLinkColor = Color.DimGray
+        cln4.AutoSize = True
+        cln4.LinkBehavior = LinkBehavior.NeverUnderline
+        cln4.LinkColor = Color.Gray
+        cln4.Location = New Point(283, 107)
+        cln4.Name = "cln4"
+        cln4.Size = New Size(39, 20)
+        cln4.TabIndex = 54
+        cln4.TabStop = True
+        cln4.Text = "清空"
         ' 
         ' CheckBox11
         ' 
@@ -928,22 +1020,22 @@ Partial Class Form1
         CheckBox11.ForeColor = Color.DimGray
         CheckBox11.Image = CType(resources.GetObject("CheckBox11.Image"), Image)
         CheckBox11.ImageAlign = ContentAlignment.MiddleLeft
-        CheckBox11.Location = New Point(27, 105)
+        CheckBox11.Location = New Point(205, 105)
         CheckBox11.Name = "CheckBox11"
-        CheckBox11.Size = New Size(141, 24)
+        CheckBox11.Size = New Size(72, 24)
         CheckBox11.TabIndex = 52
-        CheckBox11.Text = "2上的标记："
+        CheckBox11.Text = "2"
         CheckBox11.TextAlign = ContentAlignment.MiddleCenter
         CheckBox11.UseVisualStyleBackColor = True
         ' 
         ' armt2
         ' 
-        armt2.Location = New Point(26, 134)
+        armt2.Location = New Point(26, 135)
         armt2.MaxLength = 20
         armt2.Multiline = True
         armt2.Name = "armt2"
         armt2.ScrollBars = ScrollBars.Vertical
-        armt2.Size = New Size(295, 100)
+        armt2.Size = New Size(295, 99)
         armt2.TabIndex = 46
         ' 
         ' Label12
@@ -956,90 +1048,78 @@ Partial Class Form1
         Label12.TabIndex = 51
         Label12.Text = "#2"
         ' 
-        ' CheckBox5
+        ' nh4
         ' 
-        CheckBox5.Appearance = Appearance.Button
-        CheckBox5.Checked = True
-        CheckBox5.CheckState = CheckState.Checked
-        CheckBox5.Image = CType(resources.GetObject("CheckBox5.Image"), Image)
-        CheckBox5.Location = New Point(287, 66)
-        CheckBox5.Name = "CheckBox5"
-        CheckBox5.Size = New Size(35, 35)
-        CheckBox5.TabIndex = 50
-        CheckBox5.TextImageRelation = TextImageRelation.ImageBeforeText
-        CheckBox5.UseVisualStyleBackColor = True
+        nh4.BackColor = Color.WhiteSmoke
+        nh4.BorderStyle = BorderStyle.None
+        nh4.Font = New Font("Consolas", 25F, FontStyle.Regular, GraphicsUnit.Pixel)
+        nh4.Location = New Point(26, 26)
+        nh4.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
+        nh4.Name = "nh4"
+        nh4.Size = New Size(55, 33)
+        nh4.TabIndex = 43
+        nh4.TextAlign = HorizontalAlignment.Center
         ' 
-        ' NumericUpDown5
+        ' cls4
         ' 
-        NumericUpDown5.BackColor = Color.WhiteSmoke
-        NumericUpDown5.BorderStyle = BorderStyle.None
-        NumericUpDown5.Font = New Font("Consolas", 15F, FontStyle.Regular, GraphicsUnit.Point)
-        NumericUpDown5.Location = New Point(26, 26)
-        NumericUpDown5.Name = "NumericUpDown5"
-        NumericUpDown5.Size = New Size(55, 33)
-        NumericUpDown5.TabIndex = 43
-        NumericUpDown5.TextAlign = HorizontalAlignment.Center
+        cls4.Image = CType(resources.GetObject("cls4.Image"), Image)
+        cls4.Location = New Point(161, 24)
+        cls4.Name = "cls4"
+        cls4.Size = New Size(79, 35)
+        cls4.TabIndex = 42
+        cls4.Text = "归零"
+        cls4.TextAlign = ContentAlignment.MiddleRight
+        cls4.TextImageRelation = TextImageRelation.ImageBeforeText
+        cls4.UseVisualStyleBackColor = True
         ' 
-        ' Button10
+        ' add4
         ' 
-        Button10.Image = CType(resources.GetObject("Button10.Image"), Image)
-        Button10.Location = New Point(149, 24)
-        Button10.Name = "Button10"
-        Button10.Size = New Size(35, 35)
-        Button10.TabIndex = 42
-        Button10.UseVisualStyleBackColor = True
+        add4.Location = New Point(205, 66)
+        add4.Name = "add4"
+        add4.Size = New Size(35, 35)
+        add4.TabIndex = 49
+        add4.Text = "..."
+        ToolTip1.SetToolTip(add4, "选择项...")
+        add4.UseVisualStyleBackColor = True
         ' 
-        ' Button7
+        ' nm4
         ' 
-        Button7.Location = New Point(246, 66)
-        Button7.Name = "Button7"
-        Button7.Size = New Size(35, 35)
-        Button7.TabIndex = 49
-        Button7.Text = "..."
-        Button7.UseVisualStyleBackColor = True
+        nm4.BackColor = Color.WhiteSmoke
+        nm4.BorderStyle = BorderStyle.None
+        nm4.Font = New Font("Consolas", 25F, FontStyle.Regular, GraphicsUnit.Pixel)
+        nm4.Location = New Point(93, 26)
+        nm4.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
+        nm4.Name = "nm4"
+        nm4.Size = New Size(55, 33)
+        nm4.TabIndex = 44
+        nm4.TextAlign = HorizontalAlignment.Center
         ' 
-        ' NumericUpDown4
+        ' path4
         ' 
-        NumericUpDown4.BackColor = Color.WhiteSmoke
-        NumericUpDown4.BorderStyle = BorderStyle.None
-        NumericUpDown4.Font = New Font("Consolas", 25F, FontStyle.Regular, GraphicsUnit.Pixel)
-        NumericUpDown4.Location = New Point(88, 26)
-        NumericUpDown4.Name = "NumericUpDown4"
-        NumericUpDown4.Size = New Size(55, 33)
-        NumericUpDown4.TabIndex = 44
-        NumericUpDown4.TextAlign = HorizontalAlignment.Center
-        ' 
-        ' TextBox6
-        ' 
-        TextBox6.Font = New Font("微软雅黑", 11F, FontStyle.Italic, GraphicsUnit.Point)
-        TextBox6.Location = New Point(26, 67)
-        TextBox6.Name = "TextBox6"
-        TextBox6.Size = New Size(214, 32)
-        TextBox6.TabIndex = 48
-        ' 
-        ' Button8
-        ' 
-        Button8.Location = New Point(190, 24)
-        Button8.Name = "Button8"
-        Button8.Size = New Size(132, 35)
-        Button8.TabIndex = 45
-        Button8.Text = "同步到系统时间"
-        Button8.UseVisualStyleBackColor = True
+        path4.BackColor = Color.White
+        path4.Font = New Font("微软雅黑", 9F, FontStyle.Italic, GraphicsUnit.Point)
+        path4.Location = New Point(26, 67)
+        path4.Multiline = True
+        path4.Name = "path4"
+        path4.ReadOnly = True
+        path4.ScrollBars = ScrollBars.Vertical
+        path4.Size = New Size(173, 59)
+        path4.TabIndex = 48
         ' 
         ' TabPage7
         ' 
         TabPage7.BackColor = Color.WhiteSmoke
-        TabPage7.Controls.Add(LinkLabel4)
+        TabPage7.Controls.Add(dft5)
+        TabPage7.Controls.Add(pre3)
+        TabPage7.Controls.Add(cln5)
         TabPage7.Controls.Add(CheckBox12)
         TabPage7.Controls.Add(armt3)
         TabPage7.Controls.Add(Label14)
-        TabPage7.Controls.Add(CheckBox6)
-        TabPage7.Controls.Add(Button12)
-        TabPage7.Controls.Add(TextBox8)
-        TabPage7.Controls.Add(Button13)
-        TabPage7.Controls.Add(NumericUpDown6)
-        TabPage7.Controls.Add(NumericUpDown7)
-        TabPage7.Controls.Add(Button14)
+        TabPage7.Controls.Add(add5)
+        TabPage7.Controls.Add(path5)
+        TabPage7.Controls.Add(nm5)
+        TabPage7.Controls.Add(nh5)
+        TabPage7.Controls.Add(cls5)
         TabPage7.Location = New Point(4, 29)
         TabPage7.Name = "TabPage7"
         TabPage7.Padding = New Padding(3)
@@ -1047,18 +1127,36 @@ Partial Class Form1
         TabPage7.TabIndex = 2
         TabPage7.Text = "3"
         ' 
-        ' LinkLabel4
+        ' dft5
         ' 
-        LinkLabel4.ActiveLinkColor = Color.DimGray
-        LinkLabel4.AutoSize = True
-        LinkLabel4.LinkBehavior = LinkBehavior.NeverUnderline
-        LinkLabel4.LinkColor = Color.Gray
-        LinkLabel4.Location = New Point(283, 106)
-        LinkLabel4.Name = "LinkLabel4"
-        LinkLabel4.Size = New Size(39, 20)
-        LinkLabel4.TabIndex = 53
-        LinkLabel4.TabStop = True
-        LinkLabel4.Text = "清空"
+        dft5.Location = New Point(246, 66)
+        dft5.Name = "dft5"
+        dft5.Size = New Size(76, 35)
+        dft5.TabIndex = 57
+        dft5.Text = "默认"
+        dft5.UseVisualStyleBackColor = True
+        ' 
+        ' pre3
+        ' 
+        pre3.Location = New Point(246, 24)
+        pre3.Name = "pre3"
+        pre3.Size = New Size(76, 35)
+        pre3.TabIndex = 54
+        pre3.Text = "预响铃"
+        pre3.UseVisualStyleBackColor = True
+        ' 
+        ' cln5
+        ' 
+        cln5.ActiveLinkColor = Color.DimGray
+        cln5.AutoSize = True
+        cln5.LinkBehavior = LinkBehavior.NeverUnderline
+        cln5.LinkColor = Color.Gray
+        cln5.Location = New Point(283, 107)
+        cln5.Name = "cln5"
+        cln5.Size = New Size(39, 20)
+        cln5.TabIndex = 53
+        cln5.TabStop = True
+        cln5.Text = "清空"
         ' 
         ' CheckBox12
         ' 
@@ -1067,22 +1165,22 @@ Partial Class Form1
         CheckBox12.ForeColor = Color.DimGray
         CheckBox12.Image = CType(resources.GetObject("CheckBox12.Image"), Image)
         CheckBox12.ImageAlign = ContentAlignment.MiddleLeft
-        CheckBox12.Location = New Point(27, 105)
+        CheckBox12.Location = New Point(205, 105)
         CheckBox12.Name = "CheckBox12"
-        CheckBox12.Size = New Size(141, 24)
+        CheckBox12.Size = New Size(71, 24)
         CheckBox12.TabIndex = 52
-        CheckBox12.Text = "3上的标记："
+        CheckBox12.Text = "3"
         CheckBox12.TextAlign = ContentAlignment.MiddleCenter
         CheckBox12.UseVisualStyleBackColor = True
         ' 
         ' armt3
         ' 
-        armt3.Location = New Point(26, 134)
+        armt3.Location = New Point(26, 135)
         armt3.MaxLength = 20
         armt3.Multiline = True
         armt3.Name = "armt3"
         armt3.ScrollBars = ScrollBars.Vertical
-        armt3.Size = New Size(295, 100)
+        armt3.Size = New Size(295, 99)
         armt3.TabIndex = 46
         ' 
         ' Label14
@@ -1095,83 +1193,75 @@ Partial Class Form1
         Label14.TabIndex = 51
         Label14.Text = "#3"
         ' 
-        ' CheckBox6
+        ' add5
         ' 
-        CheckBox6.Appearance = Appearance.Button
-        CheckBox6.Checked = True
-        CheckBox6.CheckState = CheckState.Checked
-        CheckBox6.Image = CType(resources.GetObject("CheckBox6.Image"), Image)
-        CheckBox6.Location = New Point(287, 66)
-        CheckBox6.Name = "CheckBox6"
-        CheckBox6.Size = New Size(35, 35)
-        CheckBox6.TabIndex = 50
-        CheckBox6.TextImageRelation = TextImageRelation.ImageBeforeText
-        CheckBox6.UseVisualStyleBackColor = True
+        add5.Location = New Point(205, 66)
+        add5.Name = "add5"
+        add5.Size = New Size(35, 35)
+        add5.TabIndex = 49
+        add5.Text = "..."
+        ToolTip1.SetToolTip(add5, "选择项...")
+        add5.UseVisualStyleBackColor = True
         ' 
-        ' Button12
+        ' path5
         ' 
-        Button12.Location = New Point(246, 66)
-        Button12.Name = "Button12"
-        Button12.Size = New Size(35, 35)
-        Button12.TabIndex = 49
-        Button12.Text = "..."
-        Button12.UseVisualStyleBackColor = True
+        path5.BackColor = Color.White
+        path5.Font = New Font("微软雅黑", 9F, FontStyle.Italic, GraphicsUnit.Point)
+        path5.Location = New Point(26, 67)
+        path5.Multiline = True
+        path5.Name = "path5"
+        path5.ReadOnly = True
+        path5.ScrollBars = ScrollBars.Vertical
+        path5.Size = New Size(173, 59)
+        path5.TabIndex = 48
         ' 
-        ' TextBox8
+        ' nm5
         ' 
-        TextBox8.Font = New Font("微软雅黑", 11F, FontStyle.Italic, GraphicsUnit.Point)
-        TextBox8.Location = New Point(26, 67)
-        TextBox8.Name = "TextBox8"
-        TextBox8.Size = New Size(214, 32)
-        TextBox8.TabIndex = 48
+        nm5.BackColor = Color.WhiteSmoke
+        nm5.BorderStyle = BorderStyle.None
+        nm5.Font = New Font("Consolas", 25F, FontStyle.Regular, GraphicsUnit.Pixel)
+        nm5.Location = New Point(93, 26)
+        nm5.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
+        nm5.Name = "nm5"
+        nm5.Size = New Size(55, 33)
+        nm5.TabIndex = 44
+        nm5.TextAlign = HorizontalAlignment.Center
         ' 
-        ' Button13
+        ' nh5
         ' 
-        Button13.Location = New Point(190, 24)
-        Button13.Name = "Button13"
-        Button13.Size = New Size(132, 35)
-        Button13.TabIndex = 45
-        Button13.Text = "同步到系统时间"
-        Button13.UseVisualStyleBackColor = True
+        nh5.BackColor = Color.WhiteSmoke
+        nh5.BorderStyle = BorderStyle.None
+        nh5.Font = New Font("Consolas", 25F, FontStyle.Regular, GraphicsUnit.Pixel)
+        nh5.Location = New Point(26, 26)
+        nh5.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
+        nh5.Name = "nh5"
+        nh5.Size = New Size(55, 33)
+        nh5.TabIndex = 43
+        nh5.TextAlign = HorizontalAlignment.Center
         ' 
-        ' NumericUpDown6
+        ' cls5
         ' 
-        NumericUpDown6.BackColor = Color.WhiteSmoke
-        NumericUpDown6.BorderStyle = BorderStyle.None
-        NumericUpDown6.Font = New Font("Consolas", 25F, FontStyle.Regular, GraphicsUnit.Pixel)
-        NumericUpDown6.Location = New Point(88, 26)
-        NumericUpDown6.Name = "NumericUpDown6"
-        NumericUpDown6.Size = New Size(55, 33)
-        NumericUpDown6.TabIndex = 44
-        NumericUpDown6.TextAlign = HorizontalAlignment.Center
-        ' 
-        ' NumericUpDown7
-        ' 
-        NumericUpDown7.BackColor = Color.WhiteSmoke
-        NumericUpDown7.BorderStyle = BorderStyle.None
-        NumericUpDown7.Font = New Font("Consolas", 15F, FontStyle.Regular, GraphicsUnit.Point)
-        NumericUpDown7.Location = New Point(26, 26)
-        NumericUpDown7.Name = "NumericUpDown7"
-        NumericUpDown7.Size = New Size(55, 33)
-        NumericUpDown7.TabIndex = 43
-        NumericUpDown7.TextAlign = HorizontalAlignment.Center
-        ' 
-        ' Button14
-        ' 
-        Button14.Image = CType(resources.GetObject("Button14.Image"), Image)
-        Button14.Location = New Point(149, 24)
-        Button14.Name = "Button14"
-        Button14.Size = New Size(35, 35)
-        Button14.TabIndex = 42
-        Button14.UseVisualStyleBackColor = True
+        cls5.Image = CType(resources.GetObject("cls5.Image"), Image)
+        cls5.Location = New Point(161, 24)
+        cls5.Name = "cls5"
+        cls5.Size = New Size(79, 35)
+        cls5.TabIndex = 42
+        cls5.Text = "归零"
+        cls5.TextAlign = ContentAlignment.MiddleRight
+        cls5.TextImageRelation = TextImageRelation.ImageBeforeText
+        cls5.UseVisualStyleBackColor = True
         ' 
         ' TabPage4
         ' 
         TabPage4.BackColor = Color.WhiteSmoke
+        TabPage4.Controls.Add(Label4)
+        TabPage4.Controls.Add(LinkLabel4)
+        TabPage4.Controls.Add(Label1)
+        TabPage4.Controls.Add(Button1)
+        TabPage4.Controls.Add(PictureBox1)
         TabPage4.Controls.Add(Label6)
         TabPage4.Controls.Add(Label5)
         TabPage4.Controls.Add(Button11)
-        TabPage4.Controls.Add(Button9)
         TabPage4.Location = New Point(4, 36)
         TabPage4.Name = "TabPage4"
         TabPage4.Padding = New Padding(3)
@@ -1179,20 +1269,73 @@ Partial Class Form1
         TabPage4.TabIndex = 3
         TabPage4.Text = "关于"
         ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Font = New Font("微软雅黑", 10F, FontStyle.Regular, GraphicsUnit.Point)
+        Label4.Location = New Point(102, 70)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(211, 23)
+        Label4.TabIndex = 9
+        Label4.Text = "PRESENT BY PULSE-TEAM."
+        ' 
+        ' LinkLabel4
+        ' 
+        LinkLabel4.ActiveLinkColor = Color.Gray
+        LinkLabel4.AutoSize = True
+        LinkLabel4.LinkColor = Color.Gray
+        LinkLabel4.Location = New Point(17, 85)
+        LinkLabel4.Name = "LinkLabel4"
+        LinkLabel4.Size = New Size(309, 20)
+        LinkLabel4.TabIndex = 40
+        LinkLabel4.TabStop = True
+        LinkLabel4.Text = "                                                                           "
+        ' 
+        ' Label1
+        ' 
+        Label1.Font = New Font("新宋体", 10.8F, FontStyle.Regular, GraphicsUnit.Point)
+        Label1.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        Label1.Location = New Point(126, 116)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(194, 167)
+        Label1.TabIndex = 8
+        Label1.Text = "  基于.NET 构建的标准Windows桌面应用，轻松实现实现计时、秒表和闹钟等功能，界面美观操作方便。版本1.0.0" & vbCrLf & "  要了解更多关于程序使用说明的讯息，点击" & ChrW(8220) & "说明文档" & ChrW(8221) & "按钮。"
+        ' 
+        ' Button1
+        ' 
+        Button1.Location = New Point(126, 383)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(194, 35)
+        Button1.TabIndex = 6
+        Button1.Text = "联系与反馈"
+        Button1.UseVisualStyleBackColor = True
+        ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), Image)
+        PictureBox1.BackgroundImageLayout = ImageLayout.Stretch
+        PictureBox1.BorderStyle = BorderStyle.Fixed3D
+        PictureBox1.Location = New Point(26, 116)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(88, 302)
+        PictureBox1.TabIndex = 5
+        PictureBox1.TabStop = False
+        ' 
         ' Label6
         ' 
-        Label6.Font = New Font("宋体", 18F, FontStyle.Regular, GraphicsUnit.Pixel)
-        Label6.Location = New Point(20, 71)
+        Label6.Font = New Font("新宋体", 10.8F, FontStyle.Regular, GraphicsUnit.Point)
+        Label6.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        Label6.Location = New Point(126, 283)
         Label6.Name = "Label6"
-        Label6.Size = New Size(300, 155)
+        Label6.Size = New Size(194, 43)
         Label6.TabIndex = 4
-        Label6.Text = "  基于.net Framework 6.0 构建的标准的Win32应用。" & vbCrLf & "  欲要了解更多有关软件使用技巧的信息，请单击" & ChrW(8220) & "帮助中心" & ChrW(8221) & "按钮启动帮助页。有关软件其他方面自定义的修改请单击" & ChrW(8220) & "高级设定" & ChrW(8221) & "按钮展开。"
+        Label6.Text = "  禁用本DPI缩放来改善显示效果。  " & vbCrLf
         ' 
         ' Label5
         ' 
         Label5.AutoSize = True
         Label5.Font = New Font("微软雅黑", 16F, FontStyle.Regular, GraphicsUnit.Point)
-        Label5.Location = New Point(20, 24)
+        Label5.Location = New Point(26, 30)
         Label5.Name = "Label5"
         Label5.Size = New Size(162, 35)
         Label5.TabIndex = 3
@@ -1200,21 +1343,12 @@ Partial Class Form1
         ' 
         ' Button11
         ' 
-        Button11.Location = New Point(20, 393)
+        Button11.Location = New Point(126, 342)
         Button11.Name = "Button11"
-        Button11.Size = New Size(300, 36)
+        Button11.Size = New Size(194, 35)
         Button11.TabIndex = 2
-        Button11.Text = "帮助中心"
+        Button11.Text = "说明文档"
         Button11.UseVisualStyleBackColor = True
-        ' 
-        ' Button9
-        ' 
-        Button9.Location = New Point(20, 351)
-        Button9.Name = "Button9"
-        Button9.Size = New Size(300, 36)
-        Button9.TabIndex = 0
-        Button9.Text = "高级设定"
-        Button9.UseVisualStyleBackColor = True
         ' 
         ' btnStop
         ' 
@@ -1298,7 +1432,7 @@ Partial Class Form1
         systime0.Name = "systime0"
         systime0.Size = New Size(66, 30)
         systime0.TabIndex = 10
-        systime0.Text = "systime"
+        systime0.Text = "systime0"
         systime0.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' Timer2
@@ -1424,8 +1558,7 @@ Partial Class Form1
         ' 
         ' lblPro0
         ' 
-        lblPro0.BackColor = Color.White
-        lblPro0.BorderStyle = BorderStyle.FixedSingle
+        lblPro0.BackColor = Color.LightGray
         lblPro0.Location = New Point(22, 13)
         lblPro0.Name = "lblPro0"
         lblPro0.Size = New Size(294, 19)
@@ -1434,8 +1567,7 @@ Partial Class Form1
         ' 
         ' lblPro1
         ' 
-        lblPro1.BackColor = Color.DimGray
-        lblPro1.BorderStyle = BorderStyle.FixedSingle
+        lblPro1.BackColor = Color.Gray
         lblPro1.Location = New Point(22, 13)
         lblPro1.Name = "lblPro1"
         lblPro1.Size = New Size(294, 19)
@@ -1450,11 +1582,12 @@ Partial Class Form1
         Panel3.Controls.Add(lblPro0)
         Panel3.Location = New Point(-10, 487)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(358, 50)
+        Panel3.Size = New Size(362, 50)
         Panel3.TabIndex = 31
         ' 
         ' Panel4
         ' 
+        Panel4.Controls.Add(CheckBox2)
         Panel4.Controls.Add(notify)
         Panel4.Controls.Add(topdsp)
         Panel4.Controls.Add(mini)
@@ -1462,6 +1595,19 @@ Partial Class Form1
         Panel4.Name = "Panel4"
         Panel4.Size = New Size(103, 32)
         Panel4.TabIndex = 32
+        ' 
+        ' CheckBox2
+        ' 
+        CheckBox2.Appearance = Appearance.Button
+        CheckBox2.Checked = True
+        CheckBox2.CheckState = CheckState.Checked
+        CheckBox2.Location = New Point(85, 2)
+        CheckBox2.Name = "CheckBox2"
+        CheckBox2.Size = New Size(30, 10)
+        CheckBox2.TabIndex = 36
+        CheckBox2.Text = "CheckBox2"
+        CheckBox2.UseVisualStyleBackColor = True
+        CheckBox2.Visible = False
         ' 
         ' autoprt
         ' 
@@ -1483,18 +1629,37 @@ Partial Class Form1
         TextBox2.Size = New Size(80, 27)
         TextBox2.TabIndex = 35
         ' 
-        ' Timer3
+        ' Timer5
         ' 
-        Timer3.Enabled = True
-        Timer3.Interval = 10
+        Timer5.Enabled = True
+        ' 
+        ' Timer6
+        ' 
+        Timer6.Enabled = True
+        ' 
+        ' Timer7
+        ' 
+        Timer7.Enabled = True
+        ' 
+        ' OpenFileDialog1
+        ' 
+        OpenFileDialog1.FileName = "OpenFileDialog1"
+        OpenFileDialog1.Title = "选择音效文件..."
+        ' 
+        ' OpenFileDialog2
+        ' 
+        OpenFileDialog2.FileName = "OpenFileDialog2"
+        ' 
+        ' OpenFileDialog3
+        ' 
+        OpenFileDialog3.FileName = "OpenFileDialog3"
         ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.Inherit
         BackColor = Color.WhiteSmoke
         BackgroundImageLayout = ImageLayout.Stretch
-        ClientSize = New Size(845, 534)
+        ClientSize = New Size(348, 534)
         Controls.Add(TextBox2)
         Controls.Add(Label3)
         Controls.Add(Panel4)
@@ -1513,11 +1678,12 @@ Partial Class Form1
         Controls.Add(TabControl1)
         DoubleBuffered = True
         FormBorderStyle = FormBorderStyle.FixedSingle
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MaximizeBox = False
         MinimizeBox = False
         Name = "Form1"
         StartPosition = FormStartPosition.CenterScreen
-        Text = " "
+        Text = " ChronoSuite"
         TabControl1.ResumeLayout(False)
         TabPage1.ResumeLayout(False)
         TabPage1.PerformLayout()
@@ -1532,18 +1698,19 @@ Partial Class Form1
         TabControl2.ResumeLayout(False)
         TabPage5.ResumeLayout(False)
         TabPage5.PerformLayout()
-        CType(NumericUpDown1, ComponentModel.ISupportInitialize).EndInit()
-        CType(NumericUpDown2, ComponentModel.ISupportInitialize).EndInit()
+        CType(nh3, ComponentModel.ISupportInitialize).EndInit()
+        CType(nm3, ComponentModel.ISupportInitialize).EndInit()
         TabPage6.ResumeLayout(False)
         TabPage6.PerformLayout()
-        CType(NumericUpDown5, ComponentModel.ISupportInitialize).EndInit()
-        CType(NumericUpDown4, ComponentModel.ISupportInitialize).EndInit()
+        CType(nh4, ComponentModel.ISupportInitialize).EndInit()
+        CType(nm4, ComponentModel.ISupportInitialize).EndInit()
         TabPage7.ResumeLayout(False)
         TabPage7.PerformLayout()
-        CType(NumericUpDown6, ComponentModel.ISupportInitialize).EndInit()
-        CType(NumericUpDown7, ComponentModel.ISupportInitialize).EndInit()
+        CType(nm5, ComponentModel.ISupportInitialize).EndInit()
+        CType(nh5, ComponentModel.ISupportInitialize).EndInit()
         TabPage4.ResumeLayout(False)
         TabPage4.PerformLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         Panel3.ResumeLayout(False)
         Panel4.ResumeLayout(False)
         ResumeLayout(False)
@@ -1587,7 +1754,6 @@ Partial Class Form1
     Friend WithEvents notify As Button
     Friend WithEvents mini As Button
     Friend WithEvents Button11 As Button
-    Friend WithEvents Button9 As Button
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents ToolTip1 As ToolTip
@@ -1610,17 +1776,16 @@ Partial Class Form1
     Friend WithEvents TabControl2 As TabControl
     Friend WithEvents TabPage5 As TabPage
     Friend WithEvents armt1 As TextBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents Button6 As Button
-    Friend WithEvents NumericUpDown2 As NumericUpDown
-    Friend WithEvents NumericUpDown1 As NumericUpDown
-    Friend WithEvents Button2 As Button
+    Friend WithEvents add3 As Button
+    Friend WithEvents path3 As TextBox
+    Friend WithEvents nm3 As NumericUpDown
+    Friend WithEvents nh3 As NumericUpDown
+    Friend WithEvents cls3 As Button
     Friend WithEvents TabPage6 As TabPage
     Friend WithEvents TabPage7 As TabPage
     Friend WithEvents Panel1 As Panel
     Friend WithEvents lblPercent As Label
-    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents sound3 As CheckBox
     Friend WithEvents chkautoprt As CheckBox
     Friend WithEvents btnReset As Button
     Friend WithEvents lblTime As Label
@@ -1628,22 +1793,20 @@ Partial Class Form1
     Friend WithEvents ImageList1 As ImageList
     Friend WithEvents armstate As Label
     Friend WithEvents Label13 As Label
-    Friend WithEvents CheckBox5 As CheckBox
-    Friend WithEvents NumericUpDown5 As NumericUpDown
+    Friend WithEvents sound4 As CheckBox
+    Friend WithEvents nh4 As NumericUpDown
     Friend WithEvents armt2 As TextBox
-    Friend WithEvents Button10 As Button
-    Friend WithEvents Button7 As Button
-    Friend WithEvents NumericUpDown4 As NumericUpDown
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents Button8 As Button
-    Friend WithEvents CheckBox6 As CheckBox
+    Friend WithEvents cls4 As Button
+    Friend WithEvents add4 As Button
+    Friend WithEvents nm4 As NumericUpDown
+    Friend WithEvents path4 As TextBox
+    Friend WithEvents sound5 As CheckBox
     Friend WithEvents armt3 As TextBox
-    Friend WithEvents Button12 As Button
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents Button13 As Button
-    Friend WithEvents NumericUpDown6 As NumericUpDown
-    Friend WithEvents NumericUpDown7 As NumericUpDown
-    Friend WithEvents Button14 As Button
+    Friend WithEvents add5 As Button
+    Friend WithEvents path5 As TextBox
+    Friend WithEvents nm5 As NumericUpDown
+    Friend WithEvents nh5 As NumericUpDown
+    Friend WithEvents cls5 As Button
     Friend WithEvents Label12 As Label
     Friend WithEvents Label14 As Label
     Friend WithEvents lblPro0 As Label
@@ -1661,12 +1824,26 @@ Partial Class Form1
     Friend WithEvents LinkLabel2 As LinkLabel
     Friend WithEvents LinkLabel1 As LinkLabel
     Friend WithEvents LinkLabel3 As LinkLabel
-    Friend WithEvents ToolTip2 As ToolTip
-    Friend WithEvents ToolTip3 As ToolTip
-    Friend WithEvents ToolTip4 As ToolTip
+    Friend WithEvents cln5 As LinkLabel
+    Friend WithEvents cln3 As LinkLabel
+    Friend WithEvents cln4 As LinkLabel
+    Friend WithEvents Timer5 As Timer
+    Friend WithEvents CheckBox2 As CheckBox
+    Friend WithEvents pre2 As Button
+    Friend WithEvents pre3 As Button
+    Friend WithEvents btn0 As Button
+    Friend WithEvents Timer6 As Timer
+    Friend WithEvents Timer7 As Timer
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents dft4 As Button
+    Friend WithEvents dft3 As Button
+    Friend WithEvents dft5 As Button
+    Friend WithEvents OpenFileDialog2 As OpenFileDialog
+    Friend WithEvents OpenFileDialog3 As OpenFileDialog
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Label4 As Label
     Friend WithEvents LinkLabel4 As LinkLabel
-    Friend WithEvents LinkLabel6 As LinkLabel
-    Friend WithEvents LinkLabel5 As LinkLabel
-    Friend WithEvents Timer3 As Timer
 
 End Class
