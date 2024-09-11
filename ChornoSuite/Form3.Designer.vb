@@ -24,9 +24,9 @@ Partial Class Form3
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form3))
         Label1 = New Label()
-        Button1 = New Button()
-        Button2 = New Button()
         TextBox1 = New TextBox()
+        Button2 = New Button()
+        Button1 = New Button()
         SuspendLayout()
         ' 
         ' Label1
@@ -39,24 +39,6 @@ Partial Class Form3
         Label1.TabIndex = 0
         Label1.Text = "00:00:00"
         ' 
-        ' Button1
-        ' 
-        Button1.Image = CType(resources.GetObject("Button1.Image"), Image)
-        Button1.Location = New Point(350, 13)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(35, 35)
-        Button1.TabIndex = 2
-        Button1.UseVisualStyleBackColor = True
-        ' 
-        ' Button2
-        ' 
-        Button2.Image = CType(resources.GetObject("Button2.Image"), Image)
-        Button2.Location = New Point(309, 13)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(35, 35)
-        Button2.TabIndex = 3
-        Button2.UseVisualStyleBackColor = True
-        ' 
         ' TextBox1
         ' 
         TextBox1.BackColor = SystemColors.ButtonHighlight
@@ -68,15 +50,39 @@ Partial Class Form3
         TextBox1.Size = New Size(369, 93)
         TextBox1.TabIndex = 4
         ' 
+        ' Button2
+        ' 
+        Button2.Image = CType(resources.GetObject("Button2.Image"), Image)
+        Button2.Location = New Point(209, 13)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(85, 35)
+        Button2.TabIndex = 9
+        Button2.Text = "最小化"
+        Button2.TextAlign = ContentAlignment.MiddleRight
+        Button2.TextImageRelation = TextImageRelation.ImageBeforeText
+        Button2.UseVisualStyleBackColor = True
+        ' 
+        ' Button1
+        ' 
+        Button1.Image = CType(resources.GetObject("Button1.Image"), Image)
+        Button1.Location = New Point(300, 13)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(85, 35)
+        Button1.TabIndex = 8
+        Button1.Text = "关闭"
+        Button1.TextAlign = ContentAlignment.MiddleRight
+        Button1.TextImageRelation = TextImageRelation.ImageBeforeText
+        Button1.UseVisualStyleBackColor = True
+        ' 
         ' Form3
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(399, 170)
         ControlBox = False
-        Controls.Add(TextBox1)
         Controls.Add(Button2)
         Controls.Add(Button1)
+        Controls.Add(TextBox1)
         Controls.Add(Label1)
         FormBorderStyle = FormBorderStyle.FixedSingle
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
@@ -90,7 +96,7 @@ Partial Class Form3
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
     Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button1 As Button
 End Class

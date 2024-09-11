@@ -100,6 +100,7 @@ Partial Class Form6
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "Form6"
         Text = "ChronSuite | 闹钟 2 "
+        TopMost = True
         ResumeLayout(False)
         PerformLayout()
     End Sub

@@ -40,6 +40,7 @@ Partial Class Form1
         stop1 = New Label()
         LinkLabel2 = New LinkLabel()
         TabPage2 = New TabPage()
+        LinkLabel5 = New LinkLabel()
         Label2 = New Label()
         tick0 = New Label()
         text0 = New TextBox()
@@ -152,6 +153,7 @@ Partial Class Form1
         OpenFileDialog1 = New OpenFileDialog()
         OpenFileDialog2 = New OpenFileDialog()
         OpenFileDialog3 = New OpenFileDialog()
+        Process1 = New Process()
         TabControl1.SuspendLayout()
         TabPage1.SuspendLayout()
         CType(prtitvl, ComponentModel.ISupportInitialize).BeginInit()
@@ -256,6 +258,7 @@ Partial Class Form1
         prtitvl.Size = New Size(77, 32)
         prtitvl.TabIndex = 10
         prtitvl.TextAlign = HorizontalAlignment.Center
+        ToolTip1.SetToolTip(prtitvl, "中键按下还原默认值")
         prtitvl.Value = New Decimal(New Integer() {10, 0, 0, 0})
         ' 
         ' st1
@@ -375,6 +378,7 @@ Partial Class Form1
         ' 
         TabPage2.BackColor = Color.WhiteSmoke
         TabPage2.CausesValidation = False
+        TabPage2.Controls.Add(LinkLabel5)
         TabPage2.Controls.Add(Label2)
         TabPage2.Controls.Add(tick0)
         TabPage2.Controls.Add(text0)
@@ -396,6 +400,20 @@ Partial Class Form1
         TabPage2.Size = New Size(345, 462)
         TabPage2.TabIndex = 1
         TabPage2.Text = "定时"
+        ' 
+        ' LinkLabel5
+        ' 
+        LinkLabel5.ActiveLinkColor = Color.DimGray
+        LinkLabel5.AutoSize = True
+        LinkLabel5.LinkArea = New LinkArea(0, 2)
+        LinkLabel5.LinkBehavior = LinkBehavior.NeverUnderline
+        LinkLabel5.LinkColor = Color.Gray
+        LinkLabel5.Location = New Point(280, 301)
+        LinkLabel5.Name = "LinkLabel5"
+        LinkLabel5.Size = New Size(39, 20)
+        LinkLabel5.TabIndex = 55
+        LinkLabel5.TabStop = True
+        LinkLabel5.Text = "清空"
         ' 
         ' Label2
         ' 
@@ -913,7 +931,7 @@ Partial Class Form1
         CheckBox10.ImageAlign = ContentAlignment.MiddleLeft
         CheckBox10.Location = New Point(205, 105)
         CheckBox10.Name = "CheckBox10"
-        CheckBox10.Size = New Size(76, 24)
+        CheckBox10.Size = New Size(72, 24)
         CheckBox10.TabIndex = 43
         CheckBox10.Text = "1"
         CheckBox10.TextAlign = ContentAlignment.MiddleCenter
@@ -1284,7 +1302,7 @@ Partial Class Form1
         LinkLabel4.ActiveLinkColor = Color.Gray
         LinkLabel4.AutoSize = True
         LinkLabel4.LinkColor = Color.Gray
-        LinkLabel4.Location = New Point(17, 85)
+        LinkLabel4.Location = New Point(17, 84)
         LinkLabel4.Name = "LinkLabel4"
         LinkLabel4.Size = New Size(309, 20)
         LinkLabel4.TabIndex = 40
@@ -1299,7 +1317,7 @@ Partial Class Form1
         Label1.Name = "Label1"
         Label1.Size = New Size(194, 167)
         Label1.TabIndex = 8
-        Label1.Text = "  基于.NET 构建的标准Windows桌面应用，轻松实现实现计时、秒表和闹钟等功能，界面美观操作方便。版本1.0.0" & vbCrLf & "  要了解更多关于程序使用说明的讯息，点击" & ChrW(8220) & "说明文档" & ChrW(8221) & "按钮。"
+        Label1.Text = "  基于.NET 构建的标准Windows桌面应用，轻松实现实现计时、秒表和闹钟等功能，界面美观操作方便。版本1.0.0" & vbCrLf & "  要了解更多关于程序使用说明的信息，请点击" & ChrW(8220) & "说明文档" & ChrW(8221) & "。"
         ' 
         ' Button1
         ' 
@@ -1325,11 +1343,11 @@ Partial Class Form1
         ' 
         Label6.Font = New Font("新宋体", 10.8F, FontStyle.Regular, GraphicsUnit.Point)
         Label6.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Label6.Location = New Point(126, 283)
+        Label6.Location = New Point(126, 293)
         Label6.Name = "Label6"
         Label6.Size = New Size(194, 43)
         Label6.TabIndex = 4
-        Label6.Text = "  禁用本DPI缩放来改善显示效果。  " & vbCrLf
+        Label6.Text = "  *禁用本DPI缩放来改善显示效果。  " & vbCrLf
         ' 
         ' Label5
         ' 
@@ -1643,16 +1661,24 @@ Partial Class Form1
         ' 
         ' OpenFileDialog1
         ' 
-        OpenFileDialog1.FileName = "OpenFileDialog1"
         OpenFileDialog1.Title = "选择音效文件..."
         ' 
         ' OpenFileDialog2
         ' 
-        OpenFileDialog2.FileName = "OpenFileDialog2"
         ' 
         ' OpenFileDialog3
         ' 
-        OpenFileDialog3.FileName = "OpenFileDialog3"
+        ' 
+        ' Process1
+        ' 
+        Process1.StartInfo.Domain = ""
+        Process1.StartInfo.LoadUserProfile = False
+        Process1.StartInfo.Password = Nothing
+        Process1.StartInfo.StandardErrorEncoding = Nothing
+        Process1.StartInfo.StandardInputEncoding = Nothing
+        Process1.StartInfo.StandardOutputEncoding = Nothing
+        Process1.StartInfo.UserName = ""
+        Process1.SynchronizingObject = Me
         ' 
         ' Form1
         ' 
@@ -1845,5 +1871,7 @@ Partial Class Form1
     Friend WithEvents Button1 As Button
     Friend WithEvents Label4 As Label
     Friend WithEvents LinkLabel4 As LinkLabel
+    Friend WithEvents Process1 As Process
+    Friend WithEvents LinkLabel5 As LinkLabel
 
 End Class

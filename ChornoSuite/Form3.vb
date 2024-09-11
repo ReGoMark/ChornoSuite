@@ -70,12 +70,11 @@ Public Class Form3
         MyBase.OnFormClosed(e)
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Me.Close()
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        WindowState = FormWindowState.Minimized
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Me.WindowState = FormWindowState.Minimized
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Close()
     End Sub
 End Class
-

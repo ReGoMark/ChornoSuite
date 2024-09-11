@@ -2,6 +2,7 @@
 Imports System.ComponentModel
 Imports System.Diagnostics
 Imports System
+Imports System.IO
 
 Public Class Form1
     Private countdownTime As Integer ' 存储倒计时总秒数
@@ -63,17 +64,37 @@ Public Class Form1
 
         OpenFileDialog1.InitialDirectory = Application.StartupPath
         OpenFileDialog1.Filter = "波形声音文件(*.wav)|*.wav|压缩标准音频文件 (*.mp3)|*.mp3|通用音频文件|*.*"
+        OpenFileDialog1.Title = "选择文件"
 
 
         OpenFileDialog2.InitialDirectory = Application.StartupPath
         OpenFileDialog1.Filter = "波形声音文件(*.wav)|*.wav|压缩标准音频文件 (*.mp3)|*.mp3|通用音频文件|*.*"
-
+        OpenFileDialog2.Title = "选择文件"
 
         OpenFileDialog3.InitialDirectory = Application.StartupPath
         OpenFileDialog1.Filter = "波形声音文件(*.wav)|*.wav|压缩标准音频文件 (*.mp3)|*.mp3|通用音频文件|*.*"
+        OpenFileDialog3.Title = "选择文件"
 
+        If System.IO.File.Exists(Application.StartupPath & "alarm0.wav") = False Then
+            MsgBox("闹钟1 的音频文件未就绪，可能会导致程序崩溃，请检查文件目录。" & vbCrLf & “详细信息请阅读说明文档。”,, "警告")
+        End If
 
+        If System.IO.File.Exists(Application.StartupPath & "alarm1.wav") = False Then
+            MsgBox（"闹钟2 的音频文件未就绪，可能会导致程序崩溃， 请检查文件目录。" & vbCrLf & “详细信息请阅读说明文档。”,, "警告"）
+        End If
 
+        If System.IO.File.Exists(Application.StartupPath & "alarm2.wav") = False Then
+            MsgBox（"闹钟3 的音频文件未就绪，可能会导致程序崩溃， 请检查文件目录。" & vbCrLf & “详细信息请阅读说明文档。”,, "警告"）
+        End If
+
+        If System.IO.File.Exists(Application.StartupPath & "ringtone0.wav") = False Then
+            MsgBox（"定时 的音频文件未就绪，可能会导致程序崩溃， 请检查文件目录。" & vbCrLf & “详细信息请阅读说明文档。”,, "警告"）
+        End If
+
+        If System.IO.File.Exists(Application.StartupPath & "readme.pdf") = False Then
+            MsgBox（"说明文档未找到， 请重新安装程序。",, "警告"）
+            Me.Close()
+        End If
     End Sub
 
     Private Sub st1_Click(sender As Object, e As EventArgs) Handles st1.Click
@@ -767,6 +788,22 @@ Public Class Form1
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Form8.Show()
+    End Sub
 
+    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
+        Process1.StartInfo.UseShellExecute = True
+        Process1.StartInfo.FileName = Application.StartupPath & "readme.pdf"
+        Process1.Start()
+    End Sub
+
+    Private Sub prtitvl_MouseDown(sender As Object, e As MouseEventArgs) Handles prtitvl.MouseDown
+        If e.Button = MouseButtons.Middle Then
+            prtitvl.Value = 10
+        End If
+    End Sub
+
+    Private Sub LinkLabel5_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel5.LinkClicked
+        text0.Text = ""
     End Sub
 End Class
