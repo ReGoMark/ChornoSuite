@@ -131,8 +131,7 @@ Partial Class Form2
         ' 
         ' Form2
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.Inherit
         ClientSize = New Size(282, 48)
         Controls.Add(top4)
         Controls.Add(mini4)

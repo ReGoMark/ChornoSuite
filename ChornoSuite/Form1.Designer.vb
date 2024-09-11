@@ -1609,7 +1609,7 @@ Partial Class Form1
         Panel4.Controls.Add(notify)
         Panel4.Controls.Add(topdsp)
         Panel4.Controls.Add(mini)
-        Panel4.Location = New Point(245, 0)
+        Panel4.Location = New Point(245, -1)
         Panel4.Name = "Panel4"
         Panel4.Size = New Size(103, 32)
         Panel4.TabIndex = 32

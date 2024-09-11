@@ -87,8 +87,7 @@ Partial Class Form7
         ' 
         ' Form7
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.Inherit
         ClientSize = New Size(399, 170)
         ControlBox = False
         Controls.Add(Button2)

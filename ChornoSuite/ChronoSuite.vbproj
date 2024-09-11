@@ -10,6 +10,9 @@
     <Platforms>AnyCPU;x64</Platforms>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
     <ApplicationIcon>Pictures\main0.ico</ApplicationIcon>
+    <FileVersion>1.0.1</FileVersion>
+    <AssemblyVersion>1.0</AssemblyVersion>
+    <Company>PULSE-TEAM</Company>
   </PropertyGroup>
 
   <ItemGroup>

@@ -87,8 +87,7 @@ Partial Class Form5
         ' 
         ' Form5
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
-        AutoScaleMode = AutoScaleMode.Font
+        AutoScaleMode = AutoScaleMode.Inherit
         ClientSize = New Size(399, 170)
         ControlBox = False
         Controls.Add(TextBox1)
