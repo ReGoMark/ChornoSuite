@@ -40,7 +40,7 @@ Partial Class Form2
         ' 
         stop4.AutoSize = True
         stop4.Font = New Font("Microsoft YaHei UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point)
-        stop4.Location = New Point(12, 11)
+        stop4.Location = New Point(12, 12)
         stop4.Name = "stop4"
         stop4.Size = New Size(78, 24)
         stop4.TabIndex = 0

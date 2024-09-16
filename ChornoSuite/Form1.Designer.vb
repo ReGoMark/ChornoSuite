@@ -40,9 +40,9 @@ Partial Class Form1
         stop1 = New Label()
         LinkLabel2 = New LinkLabel()
         TabPage2 = New TabPage()
+        tick0 = New Label()
         LinkLabel5 = New LinkLabel()
         Label2 = New Label()
-        tick0 = New Label()
         text0 = New TextBox()
         lbl0 = New CheckBox()
         btnStart = New Button()
@@ -58,20 +58,20 @@ Partial Class Form1
         LinkLabel1 = New LinkLabel()
         TabPage3 = New TabPage()
         armc3 = New CheckBox()
+        arml3 = New Label()
+        sound5 = New CheckBox()
+        Button5 = New Button()
+        Panel1 = New Panel()
         armc2 = New CheckBox()
         armc1 = New CheckBox()
         systime1 = New Label()
-        arml3 = New Label()
-        sound5 = New CheckBox()
         sound4 = New CheckBox()
         arml2 = New Label()
         arml1 = New Label()
-        Button5 = New Button()
         sound3 = New CheckBox()
         Button4 = New Button()
         Button3 = New Button()
         LinkLabel3 = New LinkLabel()
-        Panel1 = New Panel()
         TabControl2 = New TabControl()
         TabPage5 = New TabPage()
         dft3 = New Button()
@@ -110,6 +110,8 @@ Partial Class Form1
         nh5 = New NumericUpDown()
         cls5 = New Button()
         TabPage4 = New TabPage()
+        Button11 = New Button()
+        Label8 = New Label()
         Label4 = New Label()
         LinkLabel4 = New LinkLabel()
         Label1 = New Label()
@@ -117,7 +119,6 @@ Partial Class Form1
         PictureBox1 = New PictureBox()
         Label6 = New Label()
         Label5 = New Label()
-        Button11 = New Button()
         btnStop = New Button()
         ProgressBar1 = New ProgressBar()
         s1 = New LinkLabel()
@@ -134,6 +135,9 @@ Partial Class Form1
         topdsp = New CheckBox()
         Splitter1 = New Splitter()
         NotifyIcon1 = New NotifyIcon(components)
+        ContextMenuStrip1 = New ContextMenuStrip(components)
+        还原ToolStripMenuItem = New ToolStripMenuItem()
+        退出ToolStripMenuItem = New ToolStripMenuItem()
         trans = New Label()
         Label7 = New Label()
         lblPercent = New Label()
@@ -174,6 +178,7 @@ Partial Class Form1
         CType(nh5, ComponentModel.ISupportInitialize).BeginInit()
         TabPage4.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        ContextMenuStrip1.SuspendLayout()
         Panel3.SuspendLayout()
         Panel4.SuspendLayout()
         SuspendLayout()
@@ -187,9 +192,9 @@ Partial Class Form1
         TabControl1.Controls.Add(TabPage4)
         TabControl1.Font = New Font("微软雅黑", 9F, FontStyle.Regular, GraphicsUnit.Point)
         TabControl1.ItemSize = New Size(58, 32)
-        TabControl1.Location = New Point(-1, -3)
-        TabControl1.Multiline = True
+        TabControl1.Location = New Point(-2, -3)
         TabControl1.Name = "TabControl1"
+        TabControl1.Padding = New Point(7, 3)
         TabControl1.SelectedIndex = 0
         TabControl1.Size = New Size(353, 502)
         TabControl1.SizeMode = TabSizeMode.Fixed
@@ -251,11 +256,11 @@ Partial Class Form1
         prtitvl.BorderStyle = BorderStyle.FixedSingle
         prtitvl.Font = New Font("微软雅黑", 11F, FontStyle.Regular, GraphicsUnit.Point)
         prtitvl.ForeColor = SystemColors.WindowText
-        prtitvl.Location = New Point(242, 298)
+        prtitvl.Location = New Point(241, 298)
         prtitvl.Maximum = New Decimal(New Integer() {50, 0, 0, 0})
         prtitvl.Minimum = New Decimal(New Integer() {5, 0, 0, 0})
         prtitvl.Name = "prtitvl"
-        prtitvl.Size = New Size(77, 32)
+        prtitvl.Size = New Size(78, 32)
         prtitvl.TabIndex = 10
         prtitvl.TextAlign = HorizontalAlignment.Center
         ToolTip1.SetToolTip(prtitvl, "中键按下还原默认值")
@@ -378,9 +383,9 @@ Partial Class Form1
         ' 
         TabPage2.BackColor = Color.WhiteSmoke
         TabPage2.CausesValidation = False
+        TabPage2.Controls.Add(tick0)
         TabPage2.Controls.Add(LinkLabel5)
         TabPage2.Controls.Add(Label2)
-        TabPage2.Controls.Add(tick0)
         TabPage2.Controls.Add(text0)
         TabPage2.Controls.Add(lbl0)
         TabPage2.Controls.Add(btnStart)
@@ -400,6 +405,16 @@ Partial Class Form1
         TabPage2.Size = New Size(345, 462)
         TabPage2.TabIndex = 1
         TabPage2.Text = "定时"
+        ' 
+        ' tick0
+        ' 
+        tick0.Font = New Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        tick0.Location = New Point(199, 119)
+        tick0.Name = "tick0"
+        tick0.Size = New Size(92, 27)
+        tick0.TabIndex = 1
+        tick0.Text = "00:00:00"
+        tick0.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' LinkLabel5
         ' 
@@ -424,16 +439,6 @@ Partial Class Form1
         Label2.Size = New Size(20, 27)
         Label2.TabIndex = 26
         Label2.Text = "/"
-        ' 
-        ' tick0
-        ' 
-        tick0.Font = New Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        tick0.Location = New Point(194, 119)
-        tick0.Name = "tick0"
-        tick0.Size = New Size(99, 27)
-        tick0.TabIndex = 1
-        tick0.Text = "00:00:00"
-        tick0.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' text0
         ' 
@@ -591,20 +596,20 @@ Partial Class Form1
         TabPage3.BackColor = Color.WhiteSmoke
         TabPage3.CausesValidation = False
         TabPage3.Controls.Add(armc3)
+        TabPage3.Controls.Add(arml3)
+        TabPage3.Controls.Add(sound5)
+        TabPage3.Controls.Add(Button5)
+        TabPage3.Controls.Add(Panel1)
         TabPage3.Controls.Add(armc2)
         TabPage3.Controls.Add(armc1)
         TabPage3.Controls.Add(systime1)
-        TabPage3.Controls.Add(arml3)
-        TabPage3.Controls.Add(sound5)
         TabPage3.Controls.Add(sound4)
         TabPage3.Controls.Add(arml2)
         TabPage3.Controls.Add(arml1)
-        TabPage3.Controls.Add(Button5)
         TabPage3.Controls.Add(sound3)
         TabPage3.Controls.Add(Button4)
         TabPage3.Controls.Add(Button3)
         TabPage3.Controls.Add(LinkLabel3)
-        TabPage3.Controls.Add(Panel1)
         TabPage3.Controls.Add(TabControl2)
         TabPage3.Location = New Point(4, 36)
         TabPage3.Name = "TabPage3"
@@ -630,6 +635,55 @@ Partial Class Form1
         armc3.TextAlign = ContentAlignment.TopLeft
         armc3.TextImageRelation = TextImageRelation.ImageBeforeText
         armc3.UseVisualStyleBackColor = False
+        ' 
+        ' arml3
+        ' 
+        arml3.Enabled = False
+        arml3.Font = New Font("微软雅黑", 16F, FontStyle.Regular, GraphicsUnit.Point)
+        arml3.ForeColor = Color.Black
+        arml3.Location = New Point(65, 126)
+        arml3.Name = "arml3"
+        arml3.Size = New Size(87, 35)
+        arml3.TabIndex = 33
+        arml3.Text = "00:00"
+        ' 
+        ' sound5
+        ' 
+        sound5.Appearance = Appearance.Button
+        sound5.Checked = True
+        sound5.CheckState = CheckState.Checked
+        sound5.FlatAppearance.BorderSize = 0
+        sound5.Image = CType(resources.GetObject("sound5.Image"), Image)
+        sound5.Location = New Point(285, 128)
+        sound5.Name = "sound5"
+        sound5.Size = New Size(35, 35)
+        sound5.TabIndex = 50
+        sound5.TextImageRelation = TextImageRelation.ImageBeforeText
+        ToolTip1.SetToolTip(sound5, "响铃")
+        sound5.UseVisualStyleBackColor = True
+        ' 
+        ' Button5
+        ' 
+        Button5.BackColor = Color.Transparent
+        Button5.FlatAppearance.BorderColor = Color.Gray
+        Button5.FlatAppearance.BorderSize = 0
+        Button5.FlatStyle = FlatStyle.Flat
+        Button5.Font = New Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        Button5.ForeColor = Color.DarkGray
+        Button5.Location = New Point(24, 127)
+        Button5.Name = "Button5"
+        Button5.Size = New Size(51, 34)
+        Button5.TabIndex = 36
+        Button5.Text = "3 |"
+        Button5.UseVisualStyleBackColor = False
+        ' 
+        ' Panel1
+        ' 
+        Panel1.BackColor = SystemColors.WindowFrame
+        Panel1.Location = New Point(326, 156)
+        Panel1.Name = "Panel1"
+        Panel1.Size = New Size(424, 49)
+        Panel1.TabIndex = 38
         ' 
         ' armc2
         ' 
@@ -678,32 +732,6 @@ Partial Class Form1
         systime1.Text = "系统时间:00:00"
         systime1.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' arml3
-        ' 
-        arml3.Enabled = False
-        arml3.Font = New Font("微软雅黑", 16F, FontStyle.Regular, GraphicsUnit.Point)
-        arml3.ForeColor = Color.Black
-        arml3.Location = New Point(65, 126)
-        arml3.Name = "arml3"
-        arml3.Size = New Size(87, 35)
-        arml3.TabIndex = 33
-        arml3.Text = "00:00"
-        ' 
-        ' sound5
-        ' 
-        sound5.Appearance = Appearance.Button
-        sound5.Checked = True
-        sound5.CheckState = CheckState.Checked
-        sound5.FlatAppearance.BorderSize = 0
-        sound5.Image = CType(resources.GetObject("sound5.Image"), Image)
-        sound5.Location = New Point(285, 128)
-        sound5.Name = "sound5"
-        sound5.Size = New Size(35, 35)
-        sound5.TabIndex = 50
-        sound5.TextImageRelation = TextImageRelation.ImageBeforeText
-        ToolTip1.SetToolTip(sound5, "响铃")
-        sound5.UseVisualStyleBackColor = True
-        ' 
         ' sound4
         ' 
         sound4.Appearance = Appearance.Button
@@ -740,21 +768,6 @@ Partial Class Form1
         arml1.Size = New Size(87, 35)
         arml1.TabIndex = 31
         arml1.Text = "00:00"
-        ' 
-        ' Button5
-        ' 
-        Button5.BackColor = Color.Transparent
-        Button5.FlatAppearance.BorderColor = Color.Gray
-        Button5.FlatAppearance.BorderSize = 0
-        Button5.FlatStyle = FlatStyle.Flat
-        Button5.Font = New Font("Consolas", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        Button5.ForeColor = Color.DarkGray
-        Button5.Location = New Point(24, 127)
-        Button5.Name = "Button5"
-        Button5.Size = New Size(51, 34)
-        Button5.TabIndex = 36
-        Button5.Text = "3 |"
-        Button5.UseVisualStyleBackColor = False
         ' 
         ' sound3
         ' 
@@ -810,14 +823,6 @@ Partial Class Form1
         LinkLabel3.TabIndex = 39
         LinkLabel3.TabStop = True
         LinkLabel3.Text = "                                                                           "
-        ' 
-        ' Panel1
-        ' 
-        Panel1.BackColor = SystemColors.WindowFrame
-        Panel1.Location = New Point(326, 156)
-        Panel1.Name = "Panel1"
-        Panel1.Size = New Size(424, 49)
-        Panel1.TabIndex = 38
         ' 
         ' TabControl2
         ' 
@@ -1272,6 +1277,8 @@ Partial Class Form1
         ' TabPage4
         ' 
         TabPage4.BackColor = Color.WhiteSmoke
+        TabPage4.Controls.Add(Button11)
+        TabPage4.Controls.Add(Label8)
         TabPage4.Controls.Add(Label4)
         TabPage4.Controls.Add(LinkLabel4)
         TabPage4.Controls.Add(Label1)
@@ -1279,13 +1286,32 @@ Partial Class Form1
         TabPage4.Controls.Add(PictureBox1)
         TabPage4.Controls.Add(Label6)
         TabPage4.Controls.Add(Label5)
-        TabPage4.Controls.Add(Button11)
         TabPage4.Location = New Point(4, 36)
         TabPage4.Name = "TabPage4"
         TabPage4.Padding = New Padding(3)
         TabPage4.Size = New Size(345, 462)
         TabPage4.TabIndex = 3
         TabPage4.Text = "关于"
+        ' 
+        ' Button11
+        ' 
+        Button11.Location = New Point(126, 342)
+        Button11.Name = "Button11"
+        Button11.Size = New Size(194, 35)
+        Button11.TabIndex = 2
+        Button11.Text = "说明文档"
+        Button11.UseVisualStyleBackColor = True
+        ' 
+        ' Label8
+        ' 
+        Label8.AutoSize = True
+        Label8.Font = New Font("新宋体", 10.8F, FontStyle.Regular, GraphicsUnit.Point)
+        Label8.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        Label8.Location = New Point(221, 266)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(89, 18)
+        Label8.TabIndex = 41
+        Label8.Text = "版本1.0.1"
         ' 
         ' Label4
         ' 
@@ -1317,7 +1343,7 @@ Partial Class Form1
         Label1.Name = "Label1"
         Label1.Size = New Size(194, 167)
         Label1.TabIndex = 8
-        Label1.Text = "  基于.NET 构建的标准Windows桌面应用，轻松实现实现计时、秒表和闹钟等功能，界面美观操作方便。版本1.0.0" & vbCrLf & "  要了解更多关于程序使用说明的信息，请点击" & ChrW(8220) & "说明文档" & ChrW(8221) & "。"
+        Label1.Text = "  基于.NET 构建的标准Windows桌面应用，轻松实现实现计时、秒表和闹钟等功能，界面美观操作方便。" & vbCrLf & "  要了解更多关于程序使用说明的信息，请点击" & ChrW(8220) & "说明文档" & ChrW(8221) & "。"
         ' 
         ' Button1
         ' 
@@ -1343,11 +1369,11 @@ Partial Class Form1
         ' 
         Label6.Font = New Font("新宋体", 10.8F, FontStyle.Regular, GraphicsUnit.Point)
         Label6.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Label6.Location = New Point(126, 293)
+        Label6.Location = New Point(126, 299)
         Label6.Name = "Label6"
         Label6.Size = New Size(194, 43)
         Label6.TabIndex = 4
-        Label6.Text = "  *禁用本DPI缩放来改善显示效果。  " & vbCrLf
+        Label6.Text = "  *禁用DPI缩放来改善显示效果。  " & vbCrLf
         ' 
         ' Label5
         ' 
@@ -1358,15 +1384,6 @@ Partial Class Form1
         Label5.Size = New Size(162, 35)
         Label5.TabIndex = 3
         Label5.Text = "ChronoSuite"
-        ' 
-        ' Button11
-        ' 
-        Button11.Location = New Point(126, 342)
-        Button11.Name = "Button11"
-        Button11.Size = New Size(194, 35)
-        Button11.TabIndex = 2
-        Button11.Text = "说明文档"
-        Button11.UseVisualStyleBackColor = True
         ' 
         ' btnStop
         ' 
@@ -1518,9 +1535,33 @@ Partial Class Form1
         ' 
         NotifyIcon1.BalloonTipIcon = ToolTipIcon.Info
         NotifyIcon1.BalloonTipTitle = "ChronoSuite"
+        NotifyIcon1.ContextMenuStrip = ContextMenuStrip1
         NotifyIcon1.Icon = CType(resources.GetObject("NotifyIcon1.Icon"), Icon)
         NotifyIcon1.Text = "ChronoSuite"
         NotifyIcon1.Visible = True
+        ' 
+        ' ContextMenuStrip1
+        ' 
+        ContextMenuStrip1.ImageScalingSize = New Size(20, 20)
+        ContextMenuStrip1.Items.AddRange(New ToolStripItem() {还原ToolStripMenuItem, 退出ToolStripMenuItem})
+        ContextMenuStrip1.Name = "ContextMenuStrip1"
+        ContextMenuStrip1.Size = New Size(109, 52)
+        ' 
+        ' 还原ToolStripMenuItem
+        ' 
+        还原ToolStripMenuItem.DisplayStyle = ToolStripItemDisplayStyle.Text
+        还原ToolStripMenuItem.Name = "还原ToolStripMenuItem"
+        还原ToolStripMenuItem.Size = New Size(108, 24)
+        还原ToolStripMenuItem.Text = "还原"
+        ' 
+        ' 退出ToolStripMenuItem
+        ' 
+        退出ToolStripMenuItem.DisplayStyle = ToolStripItemDisplayStyle.Text
+        退出ToolStripMenuItem.ImageAlign = ContentAlignment.MiddleRight
+        退出ToolStripMenuItem.Name = "退出ToolStripMenuItem"
+        退出ToolStripMenuItem.Size = New Size(108, 24)
+        退出ToolStripMenuItem.Text = "退出"
+        退出ToolStripMenuItem.TextImageRelation = TextImageRelation.Overlay
         ' 
         ' trans
         ' 
@@ -1686,10 +1727,11 @@ Partial Class Form1
         BackColor = Color.WhiteSmoke
         BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(348, 534)
+        Controls.Add(Panel3)
+        Controls.Add(Panel4)
+        Controls.Add(TabControl1)
         Controls.Add(TextBox2)
         Controls.Add(Label3)
-        Controls.Add(Panel4)
-        Controls.Add(Panel3)
         Controls.Add(lblPercent)
         Controls.Add(ProgressBar1)
         Controls.Add(Label7)
@@ -1701,7 +1743,6 @@ Partial Class Form1
         Controls.Add(m0)
         Controls.Add(h0)
         Controls.Add(s1)
-        Controls.Add(TabControl1)
         DoubleBuffered = True
         FormBorderStyle = FormBorderStyle.FixedSingle
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
@@ -1737,6 +1778,7 @@ Partial Class Form1
         TabPage4.ResumeLayout(False)
         TabPage4.PerformLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        ContextMenuStrip1.ResumeLayout(False)
         Panel3.ResumeLayout(False)
         Panel4.ResumeLayout(False)
         ResumeLayout(False)
@@ -1873,5 +1915,9 @@ Partial Class Form1
     Friend WithEvents LinkLabel4 As LinkLabel
     Friend WithEvents Process1 As Process
     Friend WithEvents LinkLabel5 As LinkLabel
+    Friend WithEvents Label8 As Label
+    Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
+    Friend WithEvents 还原ToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents 退出ToolStripMenuItem As ToolStripMenuItem
 
 End Class

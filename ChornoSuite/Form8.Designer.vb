@@ -22,6 +22,7 @@ Partial Class Form8
     '不要使用代码编辑器修改它。
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form8))
         TextBox1 = New TextBox()
         SuspendLayout()
         ' 
@@ -33,7 +34,7 @@ Partial Class Form8
         TextBox1.Name = "TextBox1"
         TextBox1.Size = New Size(409, 116)
         TextBox1.TabIndex = 0
-        TextBox1.Text = "邮箱反馈地址：regmvks@outlook.com" & vbCrLf & "Github项目地址：https://github.com/ReGoMark/ChornoSuite" & vbCrLf & "息流FlowUs主页：https://flowus.cn/regmvks/23e59d53-29b4-4128-b6f6-bccf4e83ffb2" & vbCrLf & "更多信息请查看说明文档"
+        TextBox1.Text = "邮箱反馈地址：regmvks@outlook.com" & vbCrLf & "Github项目地址：https://github.com/ReGoMark/ChornoSuite" & vbCrLf & "息流FlowUs主页：https://flowus.cn/regmvks/23e59d53-29b4-4128-b6f6-bccf4e83ffb2" & vbCrLf & vbCrLf & "更多信息请查看说明文档"
         ' 
         ' Form8
         ' 
@@ -42,6 +43,7 @@ Partial Class Form8
         ClientSize = New Size(433, 146)
         Controls.Add(TextBox1)
         FormBorderStyle = FormBorderStyle.FixedSingle
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MaximizeBox = False
         MinimizeBox = False
         Name = "Form8"

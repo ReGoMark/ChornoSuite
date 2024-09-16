@@ -806,4 +806,12 @@ Public Class Form1
     Private Sub LinkLabel5_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel5.LinkClicked
         text0.Text = ""
     End Sub
+
+    Private Sub 还原ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles 还原ToolStripMenuItem.Click
+        Me.Show()
+    End Sub
+
+    Private Sub 退出ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles 退出ToolStripMenuItem.Click
+        Me.Close()
+    End Sub
 End Class
